@@ -3,6 +3,7 @@ Recorrer un vector de N enteros contabilizando cuántos números son de 1 dígit
 de 2 dígitos, etcétera (hasta 5 dígitos).
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp17 {

@@ -18,6 +18,7 @@ seguro que desea salir del programa (S/N)? Si el usuario selecciona el carácter
 del programa, caso contrario se vuelve a mostrar el menú.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp11 {

@@ -7,6 +7,7 @@ cuadrado tiene 4 elementos por lado se deberá dibujar lo siguiente:
 * * * *
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp13 {

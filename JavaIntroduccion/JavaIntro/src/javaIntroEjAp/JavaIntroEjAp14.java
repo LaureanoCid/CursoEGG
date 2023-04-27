@@ -10,6 +10,7 @@ una cadena, este no devolverá ningún valor y mostrará un mensaje indicando el
     * 129.852 yenes es un 1 €
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp14 {

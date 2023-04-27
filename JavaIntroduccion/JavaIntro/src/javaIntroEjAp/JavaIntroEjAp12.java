@@ -11,6 +11,7 @@ e incorrectas recibidas. Para resolver el ejercicio deberá investigar cómo se 
 siguientes funciones de Java Substring(), Length(), equals().
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp12 {

@@ -4,6 +4,7 @@ al usuario un numero a buscar en el vector. El programa mostrará donde se encue
 numero y si se encuentra repetido
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp16 {
