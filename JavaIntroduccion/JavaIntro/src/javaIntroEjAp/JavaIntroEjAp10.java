@@ -4,6 +4,7 @@ solicite números al usuario hasta que la suma de los números introducidos supe
 límite inicial.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp10 {

@@ -3,6 +3,7 @@ Escribir un programa que pida tu nombre, lo guarde en una variable y lo muestre 
 pantalla.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp02 {

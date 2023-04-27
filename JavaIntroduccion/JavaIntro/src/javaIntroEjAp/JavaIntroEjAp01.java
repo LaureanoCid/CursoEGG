@@ -3,6 +3,7 @@ Escribir un programa que pida dos números enteros por teclado y calcule la suma
 dos. El programa deberá después mostrar el resultado de la suma
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp01 {

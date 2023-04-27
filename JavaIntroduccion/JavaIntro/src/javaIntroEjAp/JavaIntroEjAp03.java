@@ -4,6 +4,7 @@ en minúsculas. Nota: investigar la función toUpperCase() y toLowerCase() en
 Java.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp03 {

@@ -5,6 +5,7 @@ que diga “CORRECTO”, en caso contrario, se deberá imprimir “INCORRECTO”
 investigar la función Substring y equals() de Java.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp09 {

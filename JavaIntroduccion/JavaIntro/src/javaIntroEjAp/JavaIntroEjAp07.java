@@ -4,6 +4,7 @@ pondrá un mensaje de Correcto, sino mostrará un mensaje de Incorrecto. Nota:
 investigar la función equals() en Java.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp07 {

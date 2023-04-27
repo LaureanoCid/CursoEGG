@@ -4,6 +4,7 @@ doble, el triple y la raíz cuadrada de ese número. Nota: investigar la funció
 Math.sqrt().
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp05 {

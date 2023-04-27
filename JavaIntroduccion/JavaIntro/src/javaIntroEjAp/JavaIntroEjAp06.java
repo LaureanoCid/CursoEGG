@@ -2,6 +2,7 @@
 Crear un programa que dado un numero determine si es par o impar.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp06 {
