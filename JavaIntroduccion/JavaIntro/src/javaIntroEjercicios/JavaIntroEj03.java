@@ -2,6 +2,7 @@
 Define variables donde puedas alojar los resultados y prueba usar dos operadores de cada tipo.
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj03 {

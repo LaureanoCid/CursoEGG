@@ -2,6 +2,7 @@
 ¿Recuerdas las variables que creaste en el ejercicio anterior? Ahora deberás asignarles un valor.
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj02 {
