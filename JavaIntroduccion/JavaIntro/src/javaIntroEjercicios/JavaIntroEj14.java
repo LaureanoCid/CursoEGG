@@ -2,6 +2,7 @@
 Utilizando un Bucle for, aloja en el vector Equipo, los nombres de tus compañeros de equipo
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj14 {

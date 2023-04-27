@@ -3,6 +3,7 @@ Crea un vector llamado ‘Equipo’ cuya dimensión sea la cantidad de compañer
 define su tipo de dato de tal manera que te permita alojar sus nombres más adelante.
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj13 {

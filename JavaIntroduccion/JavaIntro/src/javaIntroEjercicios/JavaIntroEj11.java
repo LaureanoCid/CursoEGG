@@ -13,6 +13,7 @@ Por ejemplo, si el usuario ingresa: Ayer, lunes, salimos a las once y 10.
 La salida del programa debería ser: @y#r, l*n#s, s@l$m%s @ l@s %nc# y 10.
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj11 {

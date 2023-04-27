@@ -7,6 +7,7 @@ ingresado seguido de tantos asteriscos como indique su valor. Por ejemplo:
 2 **
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj10 {

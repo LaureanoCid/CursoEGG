@@ -4,6 +4,7 @@ que el primer numero m√∫ltiplo del segundo y e imprima si el primer numero es m√
 segundo, sino informe que no lo son.
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj12 {
