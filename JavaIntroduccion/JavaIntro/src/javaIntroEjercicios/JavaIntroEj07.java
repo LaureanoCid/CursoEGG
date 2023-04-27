@@ -14,6 +14,7 @@ y permitir que el usuario ingrese un valor entre 1 y 4. El programa debe mostrar
     válido para tipo de bomba”
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj07 {

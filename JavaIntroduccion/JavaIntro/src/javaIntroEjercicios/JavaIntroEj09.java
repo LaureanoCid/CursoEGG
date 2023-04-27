@@ -5,6 +5,7 @@ el resultado de la suma de los números leídos, pero si el número es negativo 
 Nota: recordar el uso de la sentencia break.
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj09 {

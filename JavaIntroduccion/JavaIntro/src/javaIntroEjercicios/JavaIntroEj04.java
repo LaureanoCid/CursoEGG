@@ -3,6 +3,7 @@ Define una variable que aloje tu nombre y otra que guarde tu edad. Imprime ambas
 por pantalla.
  */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj04 {

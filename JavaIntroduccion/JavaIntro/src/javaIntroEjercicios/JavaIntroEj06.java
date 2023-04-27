@@ -3,6 +3,7 @@ Implementar un programa que le pida dos números enteros a usuario y determine s
 alguno de ellos es mayor a 25.
 */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj06 {

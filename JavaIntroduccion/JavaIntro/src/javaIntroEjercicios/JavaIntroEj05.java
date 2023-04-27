@@ -3,6 +3,7 @@ Define una variable de tipo boolean, double y char. Guarda información en ellas
 Scanner.
 */
 package javaIntroEjercicios;
+
 import java.util.Scanner;
 
 public class JavaIntroEj05 {
