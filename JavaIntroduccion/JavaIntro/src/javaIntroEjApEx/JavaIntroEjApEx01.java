@@ -3,6 +3,7 @@
 usuario ingresa 1600 minutos, el sistema debe calcular su equivalente: 1 día, 2 horas.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx01 {
