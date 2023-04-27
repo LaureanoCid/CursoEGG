@@ -6,6 +6,7 @@ El programa deberá comprobar que los números introducidos son correctos, es de
 están entre el 1 y el 9.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp20 {

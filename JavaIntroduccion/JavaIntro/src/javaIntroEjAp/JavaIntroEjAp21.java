@@ -11,6 +11,7 @@ Como podemos observar nuestra submatriz P se encuentra en la matriz M en los ín
 4,4 - 4,5 - 4,6 - 5,4 - 5,5 - 5,6 - 6,4 - 6,5 - 6,6.
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp21 {

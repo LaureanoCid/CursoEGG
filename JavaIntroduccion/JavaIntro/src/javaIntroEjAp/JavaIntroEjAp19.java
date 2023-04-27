@@ -5,6 +5,7 @@ de signo. Es decir, A es anti simétrica si A = -AT. La matriz traspuesta de una
 denota por AT y se obtiene cambiando sus filas por columnas (o viceversa).
  */
 package javaIntroEjAp;
+
 import java.util.Scanner;
 
 public class JavaIntroEjAp19 {

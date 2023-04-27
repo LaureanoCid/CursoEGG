@@ -4,6 +4,7 @@ traspuesta de la matriz. La matriz traspuesta de una matriz A se denota por B y 
 obtiene cambiando sus filas por columnas (o viceversa).
  */
 package javaIntroEjAp;
+
 public class JavaIntroEjAp18 {
 
     public static void main(String[] args) {
