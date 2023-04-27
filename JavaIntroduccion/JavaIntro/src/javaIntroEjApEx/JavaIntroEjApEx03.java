@@ -4,6 +4,7 @@ Caso contrario mostrar un mensaje. Nota: investigar la función equals() de la c
 String.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx03 {

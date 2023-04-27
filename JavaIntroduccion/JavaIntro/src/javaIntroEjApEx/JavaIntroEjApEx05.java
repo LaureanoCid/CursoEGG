@@ -11,6 +11,7 @@ Una obra social tiene tres clases de socios:
     importe en efectivo a pagar por dicho socio.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx05 {
