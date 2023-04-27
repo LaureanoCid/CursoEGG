@@ -9,6 +9,7 @@ Nota: Para resolver el ejercicio deberá investigar cómo se utilizan las siguie
 de Java substring(), Length() y Math.random().
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx23 {

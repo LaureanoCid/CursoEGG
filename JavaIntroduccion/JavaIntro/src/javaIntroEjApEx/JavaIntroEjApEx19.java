@@ -4,6 +4,7 @@ comparación deberá detenerse en cuanto se detecte alguna diferencia entre los
 elementos).
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx19 {

@@ -13,6 +13,7 @@ desaprobados, teniendo en cuenta que solo aprueban los alumnos con promedio mayo
 igual al 7 de sus notas del curso.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx21 {

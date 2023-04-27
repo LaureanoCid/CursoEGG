@@ -5,6 +5,7 @@ Después de cada persona, el programa debe preguntarle al usuario si quiere segu
 mostrando personas y frenar cuando el usuario ingrese la palabra “No”.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx16 {

@@ -4,6 +4,7 @@ restar, multiplicar y dividir. La aplicación debe tener una función para cada 
 matemática y deben devolver sus resultados para imprimirlos en el main.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx15 {

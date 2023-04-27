@@ -3,6 +3,7 @@ Crear una función rellene un vector con números aleatorios, pasándole un arre
 parámetro. Después haremos otra función o procedimiento que imprima el vector.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx20 {

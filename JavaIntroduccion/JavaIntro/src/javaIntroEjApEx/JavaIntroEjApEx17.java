@@ -12,6 +12,7 @@ El primer número primo es 2, y hay 25 números primos entre 1 y 100, ellos son:
 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 y 97.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx17 {

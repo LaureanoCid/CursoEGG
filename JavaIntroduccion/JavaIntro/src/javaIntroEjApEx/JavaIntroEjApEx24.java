@@ -15,6 +15,7 @@ Por lo tanto, si queremos calcular el término “n” debemos escribir una func
 como parámetro el valor de “n” y que calcule la serie hasta llegar a ese valor.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx24 {

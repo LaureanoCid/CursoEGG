@@ -4,6 +4,7 @@ hijos. Escriba un programa que pida la cantidad de familias y para cada familia 
 cantidad de hijos para averiguar la media de edad de los hijos de todas las familias.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx14 {

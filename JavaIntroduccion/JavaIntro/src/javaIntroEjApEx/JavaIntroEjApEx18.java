@@ -3,6 +3,7 @@ Realizar un algoritmo que calcule la suma de todos los elementos de un vector de
 N, con los valores ingresados por el usuario.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx18 {
