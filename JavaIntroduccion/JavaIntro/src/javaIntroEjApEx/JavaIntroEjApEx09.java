@@ -11,6 +11,7 @@ dado que 11 es menor que 13, entonces: el residuo es 11 y el cociente es 3.
 ¿Aún no lo entendiste? Recomendamos googlear división con restas sucesivas.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx09 {

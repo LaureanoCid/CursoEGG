@@ -7,6 +7,7 @@ usuario al comenzar. Ejemplo: si se ingresa el número 3:
 123
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx13 {

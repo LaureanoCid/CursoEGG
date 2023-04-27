@@ -6,6 +6,7 @@ al usuario ingresar su respuesta nuevamente. Para realizar este ejercicio invest
 utilizar la función Math.random() de Java.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx10 {

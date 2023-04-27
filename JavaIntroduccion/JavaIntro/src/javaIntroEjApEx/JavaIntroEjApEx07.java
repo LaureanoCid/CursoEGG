@@ -5,6 +5,7 @@ números serán introducidos por el usuario. Realice dos versiones del programa,
 usando el bucle “while” y otra con el bucle “do - while”.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx07 {

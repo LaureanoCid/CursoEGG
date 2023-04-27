@@ -6,6 +6,7 @@ operador de división. Nota: recordar que las variables de tipo entero truncan l
 números o resultados.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx11 {

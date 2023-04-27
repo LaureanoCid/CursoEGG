@@ -12,6 +12,7 @@ Ejemplo:
 Nota: investigar función equals() y como convertir números a String.
  */
 package javaIntroEjApEx;
+
 public class JavaIntroEjApEx12 {
 
     public static void main(String[] args) {        

@@ -5,6 +5,7 @@ y la cantidad de números impares. Al igual que en el ejercicio anterior los nú
 negativos no deben sumarse. Nota: recordar el uso de la sentencia break.
  */
 package javaIntroEjApEx;
+
 import java.util.Scanner;
 
 public class JavaIntroEjApEx08 {
