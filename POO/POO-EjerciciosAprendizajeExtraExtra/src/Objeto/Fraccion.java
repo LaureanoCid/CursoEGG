@@ -1,4 +1,5 @@
 package Objeto;
 
-public class Fraccion {    
+public class Fraccion {   
+    
 }

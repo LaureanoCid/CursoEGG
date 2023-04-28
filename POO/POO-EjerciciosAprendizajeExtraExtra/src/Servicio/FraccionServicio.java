@@ -1,4 +1,5 @@
 package Servicio;
 
-public class FraccionServicio {    
+public class FraccionServicio { 
+    
 }
