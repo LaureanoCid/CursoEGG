@@ -4,6 +4,7 @@
 //los atributos del objeto. Después, a través de otro método calcular y devolver la distancia
 //que existe entre los dos puntos que existen en la clase Puntos.
 package EjercicioAprendizajeExtra;
+
 import Objeto.Puntos;
 import Servicio.PuntosServicio;
 

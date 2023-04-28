@@ -1,4 +1,5 @@
 package Objeto;
+
 public class Cancion {
     private String autor;
     private String titulo;

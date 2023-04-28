@@ -1,4 +1,5 @@
 package Objeto;
+
 public class Puntos {
     private int x1;
     private int y1;
