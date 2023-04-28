@@ -33,5 +33,6 @@ public class Persona12 {
     @Override
     public String toString() {
         return "Persona[" + "Nombre = " + nombre + " - [Fecha de Nacimiento = " + fechaNacimiento + ']';
-    }    
+    }  
+    
 }

@@ -21,12 +21,11 @@ import Servicio.PersonaServicio12;
 public class POOEjAp12 {
 
     public static void main(String[] args) {
-
         PersonaServicio12 service = new PersonaServicio12();
 
         Persona12 persona = service.crearPersona();
         int edad = service.calcularEdad(persona);
         System.out.println("Usted es menor?: " + service.menorQue(edad));
         service.mostrarPersona(persona);
-    }
+    }    
 }

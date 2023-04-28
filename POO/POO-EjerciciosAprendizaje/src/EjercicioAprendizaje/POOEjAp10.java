@@ -11,6 +11,7 @@ import java.util.Arrays;
 public class POOEjAp10 {
 
     public static void main(String[] args) {
+        
         double[] arreglo1 = new double[50];
         double[] arreglo2 = new double[20];
 
