@@ -1,4 +1,5 @@
 package Objeto;
+
 public class Ahorcado {
     private String palabraABuscar;
     private int cantidadVidas;

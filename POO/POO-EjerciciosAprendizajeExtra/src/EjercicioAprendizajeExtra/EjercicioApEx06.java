@@ -31,5 +31,6 @@ public class EjercicioApEx06 {
         AhorcadoServicio service = new AhorcadoServicio();
         Ahorcado juego = new Ahorcado();
         service.juego(juego);
+        
     }        
 }
