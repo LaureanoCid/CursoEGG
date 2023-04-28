@@ -7,6 +7,7 @@
 //setters y constructores correspondientes.
 //Superficie = base * altura / Perímetro = (base + altura) * 2.
 package EjercicioAprendizaje;
+
 import Objetos.Rectangulo;
 import Servicio.RectanguloServicio;
 import java.util.Scanner;

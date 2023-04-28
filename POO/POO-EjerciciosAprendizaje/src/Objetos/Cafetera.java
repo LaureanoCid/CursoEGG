@@ -1,4 +1,5 @@
 package Objetos;
+
 public class Cafetera {
 
     private double cantidadMaxima;

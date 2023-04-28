@@ -1,4 +1,5 @@
 package Objetos;
+
 public class Cuenta {
 
     private int numeroCuenta;

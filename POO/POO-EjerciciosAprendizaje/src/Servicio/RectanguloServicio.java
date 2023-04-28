@@ -1,4 +1,5 @@
 package Servicio;
+
 import Objetos.Rectangulo;
 import java.util.Scanner;
 

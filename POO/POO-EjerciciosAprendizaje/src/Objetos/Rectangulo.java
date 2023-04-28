@@ -1,4 +1,5 @@
 package Objetos;
+
 public class Rectangulo {
 
     private double base;

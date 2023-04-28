@@ -16,6 +16,7 @@
 //    - Método agregarCafe(int): se le pide al usuario una cantidad de café, el método lo
 //        recibe y se añade a la cafetera la cantidad de café indicada.
 package EjercicioAprendizaje;
+
 import Objetos.Cafetera;
 import Servicio.CafeteraServicio;
 import java.util.Scanner;
