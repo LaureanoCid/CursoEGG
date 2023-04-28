@@ -1,4 +1,5 @@
 package Servicio;
+
 import Objeto.Adivinanza;
 import java.util.Scanner;
 

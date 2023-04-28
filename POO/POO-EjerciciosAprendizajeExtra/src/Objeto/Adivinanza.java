@@ -1,4 +1,5 @@
 package Objeto;
+
 public class Adivinanza {
     String [] mes = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
     String adivinanza = mes [10];

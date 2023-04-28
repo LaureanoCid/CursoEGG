@@ -1,4 +1,5 @@
 package Objeto;
+
 public class Nif {
     private long dni;
     private String nif;
