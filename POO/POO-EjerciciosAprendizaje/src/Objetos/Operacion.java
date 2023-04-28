@@ -1,4 +1,5 @@
 package Objetos;
+
 public class Operacion {
 
     private int num1;
