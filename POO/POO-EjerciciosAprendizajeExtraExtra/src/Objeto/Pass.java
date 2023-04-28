@@ -42,6 +42,5 @@ public class Pass {
     @Override
     public String toString() {
         return "Pass{" + "pass=" + pass + ", nombre=" + nombre + ", dni=" + dni + '}';
-    }
-    
+    }   
 }

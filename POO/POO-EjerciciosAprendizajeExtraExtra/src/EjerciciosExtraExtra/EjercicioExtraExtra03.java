@@ -35,8 +35,7 @@ import java.util.Scanner;
 
 public class EjercicioExtraExtra03 {
 
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {        
         Scanner leer = new Scanner(System.in);
         PassService PS = new PassService();
         Pass p = PS.CrearPass();
