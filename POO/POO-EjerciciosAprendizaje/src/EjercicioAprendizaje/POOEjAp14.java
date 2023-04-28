@@ -19,6 +19,7 @@ import Servicio.MovilServicio;
 public class POOEjAp14 {
 
     public static void main(String[] args) {
+        
         MovilServicio service = new MovilServicio();
         Movil celular = service.cargarCelular();
     }

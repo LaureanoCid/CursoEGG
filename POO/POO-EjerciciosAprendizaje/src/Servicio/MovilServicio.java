@@ -25,6 +25,7 @@ public class MovilServicio {
         
         return celular;
     }
+    
     public int [] ingresarCodigo(Movil celular){
         int [] codigo = new int [celular.getCodigo().length];
         String codigo1 = leer.next();

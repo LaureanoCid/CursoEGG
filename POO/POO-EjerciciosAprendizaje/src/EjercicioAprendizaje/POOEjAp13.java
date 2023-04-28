@@ -27,7 +27,6 @@ import Servicio.CursoServicio;
 public class POOEjAp13 {
 
     public static void main(String[] args) {
-
         CursoServicio service = new CursoServicio();
         Curso curso1 = service.crearCurso();
         service.calcularGananciaSemanal(curso1);

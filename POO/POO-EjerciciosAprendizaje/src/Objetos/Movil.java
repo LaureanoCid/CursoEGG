@@ -1,6 +1,7 @@
 package Objetos;
 
 public class Movil {
+    
     private String marca;
     private double precio;
     private String modelo;

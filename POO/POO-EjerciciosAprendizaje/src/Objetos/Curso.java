@@ -1,6 +1,7 @@
 package Objetos;
 
 public class Curso {
+    
     private String nombreCurso;
     private int cantidadHorasPorDia;
     private int cantidadDiasPorSemana;

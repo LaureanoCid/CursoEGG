@@ -8,7 +8,6 @@ import Objetos.Curso;
 import java.util.Scanner;
 
 public class CursoServicio {
-
     Scanner leer = new Scanner(System.in);
 
     public String[] cargarAlumnos(Curso curso1) {
