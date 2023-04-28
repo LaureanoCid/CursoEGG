@@ -1,4 +1,5 @@
 package Objeto;
+
 public class SopaLetras {
     private char[][] matriz;
     private String palabra;

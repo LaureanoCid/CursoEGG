@@ -94,6 +94,7 @@ public class SopaLetraServicio {
         
         imprimir(c);
     }
+    
     public void imprimirTrans(SopaLetras b){
         for (int i = 0; i < b.getMatriz().length; i++) {
             System.out.print("|");

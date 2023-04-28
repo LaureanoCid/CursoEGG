@@ -28,5 +28,6 @@ public class EjercicioExtraExtra06 {
         service.reemplazar(sopa1);
         System.out.println("---------------------------------------");
         service.imprimirTrans(sopa1);
+        
     }    
 }
