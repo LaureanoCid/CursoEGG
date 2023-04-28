@@ -19,6 +19,7 @@ public class PassService {
         System.out.println(p1.toString());
         return p1;
     }
+    
     public void AnalizarPass(Pass p1) {
         int cont = 0, cont1 = 0;
         String Z = "z", A = "a";
