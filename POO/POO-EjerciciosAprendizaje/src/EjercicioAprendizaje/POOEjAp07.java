@@ -34,7 +34,6 @@ import Servicio.PersonaServicio7;
 public class POOEjAp07 {
 
     public static void main(String[] args) {
-
         PersonaServicio7 service = new PersonaServicio7();
 
         int menorPeso = 0, pesoIdeal = 0, mayorPeso = 0, mayorEdad = 0, menorEdad = 0, imc = 0;

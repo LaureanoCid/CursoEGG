@@ -39,7 +39,6 @@ public class PersonaServicio7 {
         }
         return i;
     }
-
     public boolean mayorDeEdad(Persona7 persona1) {
         boolean mayorEdad = false;
 

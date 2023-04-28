@@ -1,4 +1,5 @@
 package Objetos;
+
 public class Matematica {
 
     private double num1;

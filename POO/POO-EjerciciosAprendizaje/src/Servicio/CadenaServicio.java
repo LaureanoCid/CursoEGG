@@ -4,7 +4,6 @@ import Objetos.Cadena;
 import java.util.Scanner;
 
 public class CadenaServicio {
-
     Scanner leer = new Scanner(System.in);
 
     public void mostrarVocales(Cadena cadena) {

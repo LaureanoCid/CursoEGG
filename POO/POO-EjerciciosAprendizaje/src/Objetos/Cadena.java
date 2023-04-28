@@ -1,4 +1,5 @@
 package Objetos;
+
 public class Cadena {
 
     private String cadena;
