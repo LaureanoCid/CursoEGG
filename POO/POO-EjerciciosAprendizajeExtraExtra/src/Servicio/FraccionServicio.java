@@ -33,9 +33,49 @@ public class FraccionServicio {
             System.out.println("4 - Dividir");
             System.out.println("5 - Mostrar fracciones");
             System.out.println("6 - Simplificar");
+            System.out.println("7 - Salir");
             System.out.println("--------------------------");
             
-        } while (op !=5);
+            switch(op){
+                case 1:                    
+                    sumarFracciones(fracciones);
+                    break;
+                case 2:
+                    restarFracciones(fracciones);
+                    break;
+                case 3:
+                    multiFracciones(fracciones);
+                    break;
+                case 4:
+                    dividirFracciones(fracciones);
+                    break;
+                case 5:
+                    mostrarFracciones(fracciones);
+                    break;
+                case 6:
+                    simplificar(fracciones);
+                    break;
+                case 7:
+                    System.out.println("Saliendo....");
+                    break;
+                default:
+                    System.out.println("ERROR. Ingrese una opcion valida.");
+            }            
+        } while (op !=7);        
+    }
+    public void sumarFracciones(Fraccion fracciones){
+        
+    }
+    public void restarFracciones(Fraccion fracciones){
+        
+    }
+    public void multiFracciones(Fraccion fracciones){
+        
+    }
+    public void dividirFracciones (Fraccion fracciones){
+        
+    }
+    public void simplificar(Fraccion fracciones){
         
     }
 }
