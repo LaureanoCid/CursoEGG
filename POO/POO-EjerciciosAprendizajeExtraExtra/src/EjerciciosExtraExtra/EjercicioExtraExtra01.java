@@ -5,9 +5,15 @@ fracciones. Mostrar por pantalla un menú de opciones para que el usuario decida
  */
 package EjerciciosExtraExtra;
 
+import Objeto.Fraccion;
+import Servicio.FraccionServicio;
+
 public class EjercicioExtraExtra01 {
 
     public static void main(String[] args) { 
-        
+        FraccionServicio service = new FraccionServicio();        
+        Fraccion fracciones = service.crearFracciones();
+        service.mostrarFracciones(fracciones);
+        service.menu(fracciones);
     }    
 }
