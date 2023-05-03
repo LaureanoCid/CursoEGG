@@ -1,3 +1,5 @@
+//Toma la Lista, el Conjunto y el Mapa que hiciste previamente y elimina en cada uno un objeto de
+//cada forma que aprendiste arriba.
 package EjerciciosGuia;
 
 import java.util.ArrayList;
