@@ -11,9 +11,31 @@
 //promedio final, devuelto por el método y mostrado en el main.
 package EjerciciosAprendizaje;
 
+import Objetos.Alumno;
+import ObjetosServicio.AlumnoServicio;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class EjercicioAp03 {
 
     public static void main(String[] args) {
-        
-    }    
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        AlumnoServicio service = new AlumnoServicio();
+
+        ArrayList<Alumno> alumnos = service.crearAlumno();
+
+        System.out.println("Ingrese el nombre del estudiante que desea buscar: ");
+        String nombre = leer.next();
+        boolean aux = false;
+        for (Alumno alum : alumnos) {
+            if (alum.getNombre().equalsIgnoreCase(nombre)) {
+                System.out.println("La nota final del alumno es: " + service.notaFinal(alum.getListaNotas()));
+                aux = true;
+            }
+        }
+        if (!aux) {
+            System.out.println("No se encontro el alumno");
+
+        }
+    }
 }
