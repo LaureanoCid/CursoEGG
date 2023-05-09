@@ -17,8 +17,12 @@
 //  • Ordenar las películas por director, alfabéticamente y mostrarlo en pantalla.
 package EjerciciosAprendizaje;
 
+import ObjetosServicio.PeliculaServicio;
+
 public class EjercicioAp04 {
 
     public static void main(String[] args) {
+        PeliculaServicio service = new PeliculaServicio();
+        service.menu();
     }    
 }
