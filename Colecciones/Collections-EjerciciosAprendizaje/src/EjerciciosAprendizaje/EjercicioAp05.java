@@ -11,8 +11,12 @@
 //al usuario.
 package EjerciciosAprendizaje;
 
+import ObjetosServicio.PaisServicio;
+
 public class EjercicioAp05 {
 
     public static void main(String[] args) {
+        PaisServicio service = new PaisServicio();
+        service.menu();
     }    
 }
