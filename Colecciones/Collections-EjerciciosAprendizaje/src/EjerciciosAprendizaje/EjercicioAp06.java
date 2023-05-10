@@ -7,8 +7,11 @@
 //Realizar un menú para lograr todas las acciones previamente mencionadas.
 package EjerciciosAprendizaje;
 
+import ObjetosServicio.TiendaServicio;
+
 public class EjercicioAp06 {
 
     public static void main(String[] args) {
+        TiendaServicio service = new TiendaServicio();
     }    
 }
