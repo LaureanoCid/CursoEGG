@@ -51,6 +51,5 @@ public class Fraccion {
     @Override
     public String toString() {
         return "Fraccion 1: " + numerador1 + "/" + denominador1 + " --------- Fraccion 2: " + numerador2 + "/" + denominador2;
-    }
-    
+    }    
 }
