@@ -3,15 +3,15 @@ Crea una clase Alumnos, donde tendrá como Atributos el nombre, apellido, la nac
 su fecha de nacimiento. La nacionalidad podrá ser ARGENTINA – CHILENA – VENEZOLANA
 solamente.
 Necesidades:
-     Crear los métodos de A – B -M (Alta – Baja – modificación ) que manipulen los 
+    - Crear los métodos de A – B -M (Alta – Baja – modificación ) que manipulen los 
     objetos de este tipo.
-     Crear una lista de 20 alumnos (hacer uso del constructor que recibe parámetros , 
+    - Crear una lista de 20 alumnos (hacer uso del constructor que recibe parámetros , 
     para no hacer carga manual de los datos)
-     Ordenar y mostrar la lista de alumnos ordenados por orden alfabético según su 
+    - Ordenar y mostrar la lista de alumnos ordenados por orden alfabético según su 
     apellido de forma ascendente. 
-     Ordenar y mostrar la lista de alumnos ordenados por orden alfabético según su 
+    - Ordenar y mostrar la lista de alumnos ordenados por orden alfabético según su 
     nombre de forma descendente. 
-     Con un alumno especifico (suponiendo que no existen dos alumnos con el mismo 
+    - Con un alumno especifico (suponiendo que no existen dos alumnos con el mismo 
     nombre y apellido), mostrar por pantalla su edad. Considerar, el manejo de fechas, 
     utilizando el atributo fecha de nacimiento.
      Crear listas paralelas de Alumnos, según la nacionalidad.
@@ -29,8 +29,12 @@ Necesidades:
  */
 package EjerciciosExtras;
 
+import ObjetoServicio.AlumnosServicio;
+
 public class EjercicioEx01 {
 
     public static void main(String[] args) {
+        AlumnosServicio service = new AlumnosServicio();
+        service.menu();
     }
 }
