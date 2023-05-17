@@ -35,6 +35,7 @@ public class FraccionServicio {
             System.out.println("6 - Simplificar");
             System.out.println("7 - Salir");
             System.out.println("--------------------------");
+            op = leer.nextInt();
             
             switch(op){
                 case 1:                    
@@ -60,6 +61,7 @@ public class FraccionServicio {
                     break;
                 default:
                     System.out.println("ERROR. Ingrese una opcion valida.");
+                    break;
             }            
         } while (op !=7);        
     }
