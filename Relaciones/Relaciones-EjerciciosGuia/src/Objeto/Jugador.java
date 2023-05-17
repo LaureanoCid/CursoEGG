@@ -51,5 +51,6 @@ public class Jugador {
     @Override
     public String toString() {
         return "Jugador[" + nombre + " " + apellido + " - " + posicion + " - Numero = " + numero + ']';
-    }        
+    }   
+    
 }
