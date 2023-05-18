@@ -25,8 +25,6 @@ Revolver
 Métodos:
 • llenarJuego(ArrayList<Jugador>jugadores, Revolver r): este método recibe los jugadores
 y el revolver para guardarlos en los atributos del juego.
-
-10
 • ronda(): cada ronda consiste en un jugador que se apunta con el revolver de agua y
 aprieta el gatillo. Sí el revolver tira el agua el jugador se moja y se termina el juego, sino se
 moja, se pasa al siguiente jugador hasta que uno se moje. Si o si alguien se tiene que
@@ -35,9 +33,15 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
  */
 package EjerciciosAprendizaje;
 
+import Entidad.Juego;
+import Entidad.Revolver;
+
 public class EjercicioAp02 {
 
     public static void main(String[] args) {
-
+        Revolver rev = new Revolver();
+        Juego juego = new Juego();
+        juego.crearJuego(rev);
+        juego.ronda(rev, juego);
     }    
 }
