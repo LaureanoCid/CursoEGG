@@ -1,6 +1,12 @@
 package Entidad;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Perro {
+
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
+
     private String nombre;
     private String raza;
     private int edad;
@@ -40,12 +46,31 @@ public class Perro {
         this.edad = edad;
     }
 
-    public String getTamaño() {
+    public String getTamanio() {
         return tamanio;
     }
 
-    public void setTamaño(String tamanio) {
+    public void setTamanio(String tamanio) {
         this.tamanio = tamanio;
+    }
+
+    public void crearPerro(ArrayList<Perro> perros, int cant) {
+        for (int i = 0; i < cant; i++) {
+            System.out.println("----------------------");
+            Perro perro = new Perro();
+
+            System.out.println("Ingrese el nombre del perro: ");
+            perro.setNombre(leer.next());
+            System.out.println("Ingrese la raza del perro: ");
+            perro.setRaza(leer.next());
+            System.out.println("Ingrese la edad del perro: ");
+            perro.setEdad(leer.nextInt());
+            System.out.println("Ingrese el tamanio del perro: ");
+            perro.setTamanio(leer.next());
+            perros.add(perro);
+
+            System.out.println("----------------------");
+        }
     }
 
     @Override
