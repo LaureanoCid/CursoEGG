@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Vehiculo" package="Entidad" visibility="public" xPosition="64.0" yPosition="339.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="tipo" type="String[]" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Poliza" package="Entidad" visibility="public" xPosition="648.0" yPosition="696.0">
+      <Fields>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="poliza" type="Map&lt;Cliente, Collection&lt;Vehiculo&gt;&gt;" visibility="private"/>
+        <Field name="numeroPoliza" type="int" visibility="private"/>
+        <Field name="formaPago" type="String" visibility="private"/>
+        <Field name="fechaInicio" type="LocalTime" visibility="private"/>
+        <Field name="montoTotal" type="double" visibility="private"/>
+        <Field name="tipoCobertura" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cuotas" package="Entidad" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="poliza" type="Poliza" visibility="private"/>
+        <Field name="numeroCuotaCancelada" type="int" visibility="private"/>
+        <Field name="montoTotalAdeudado" type="double" visibility="private"/>
+        <Field name="cuotaPaga" type="boolean" visibility="private"/>
+        <Field name="fechaVencimientoCuota" type="LocalTime" visibility="private"/>
+        <Field name="formaPAgoCuota" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cliente" package="Entidad" visibility="public" xPosition="1032.0" yPosition="177.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="telefono" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Cliente" source="Entidad.Poliza" target="Entidad.Cliente" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="Cuota" source="Entidad.Poliza" target="Entidad.Cuotas" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Vehiculo" source="Entidad.Poliza" target="Entidad.Vehiculo" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
