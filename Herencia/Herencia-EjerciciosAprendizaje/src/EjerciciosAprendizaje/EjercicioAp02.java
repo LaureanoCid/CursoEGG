@@ -69,8 +69,49 @@ Finalmente, en el main debemos realizar lo siguiente:
  */
 package EjerciciosAprendizaje;
 
+import Objetos.Electrodomestico;
+import Objetos.Lavadora;
+import Objetos.Televisor;
+import java.util.Scanner;
+
 public class EjercicioAp02 {
 
     public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        Lavadora lavadora1 = new Lavadora();
+        Televisor tv1 = new Televisor();
+        int op;
+
+        do {
+            System.out.println("-------------------");
+            System.out.println("Bienvenido a MEGACOMPRAS!");
+            System.out.println("-------------------");
+            System.out.println("Que desea comprar?");
+            System.out.println("1 - Televisor");
+            System.out.println("2 - Lavadora");
+            System.out.println("3 - Salir del menu");
+            System.out.println("-------------------");
+            op = leer.nextInt();
+            while ((op != 1) && (op != 2) && (op != 3)) {
+                System.out.println("Error! Vuelva a ingresar una opcion!");
+                System.out.println("-------------------");
+                System.out.println("Que desea comprar?");
+                System.out.println("1 - Televisor");
+                System.out.println("2 - Lavadora");
+                System.out.println("3 - Salir del menu");
+                System.out.println("-------------------");
+            }
+            switch (op) {
+                case 1:
+                    tv1.crearTelevisor();
+                    break;
+                case 2:
+                    lavadora1.crearLavadora();
+                    break;
+                case 3:
+                    System.out.println("Saliendo . . .");
+                    break;
+            }
+        } while (op != 3);
     }
 }
