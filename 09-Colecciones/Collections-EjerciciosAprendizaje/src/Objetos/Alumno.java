@@ -1,5 +1,4 @@
 package Objetos;
-
 import java.util.ArrayList;
 
 public class Alumno {

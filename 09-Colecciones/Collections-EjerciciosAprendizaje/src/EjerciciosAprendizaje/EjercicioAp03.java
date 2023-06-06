@@ -10,7 +10,6 @@
 //del método se usará la lista notas para calcular el promedio final de alumno. Siendo este
 //promedio final, devuelto por el método y mostrado en el main.
 package EjerciciosAprendizaje;
-
 import Objetos.Alumno;
 import ObjetosServicio.AlumnoServicio;
 import java.util.ArrayList;
