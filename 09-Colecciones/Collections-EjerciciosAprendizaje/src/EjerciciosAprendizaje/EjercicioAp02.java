@@ -4,7 +4,6 @@
 //ordenada. Si el perro no se encuentra en la lista, se le informará al usuario y se mostrará
 //la lista ordenada.
 package EjerciciosAprendizaje;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
