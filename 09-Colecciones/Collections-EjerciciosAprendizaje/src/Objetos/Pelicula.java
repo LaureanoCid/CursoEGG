@@ -1,5 +1,4 @@
 package Objetos;
-
 import java.util.Comparator;
 
 public class Pelicula {
