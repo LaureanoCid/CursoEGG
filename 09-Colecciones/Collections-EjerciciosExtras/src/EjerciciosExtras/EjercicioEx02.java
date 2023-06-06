@@ -21,7 +21,6 @@ java.util.ConcurrentModificationException que tienes que cambiar en como recorre
 en como eliminas el elemento?
  */
 package EjerciciosExtras;
-
 public class EjercicioEx02 {
 
     public static void main(String[] args) {

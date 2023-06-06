@@ -10,7 +10,6 @@ Elimina todos los jugadores del conjunto jugadores2 y muestra el número de juga
 el conjunto jugadores2 (debería ahora ser cero)
  */
 package EjerciciosExtras;
-
 public class EjercicioEx03 {
 
     public static void main(String[] args) {
