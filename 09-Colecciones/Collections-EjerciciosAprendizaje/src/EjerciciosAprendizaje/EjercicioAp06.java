@@ -6,7 +6,6 @@
 //Hashmap). El HashMap tendrá de llave el nombre del producto y de valor el precio.
 //Realizar un menú para lograr todas las acciones previamente mencionadas.
 package EjerciciosAprendizaje;
-
 import ObjetosServicio.TiendaServicio;
 
 public class EjercicioAp06 {
