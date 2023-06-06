@@ -1,6 +1,5 @@
 //Toma la Lista, el Conjunto y el Mapa del ejemplo y agrega 5 objetos a cada uno.
 package EjerciciosGuia;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeSet;
