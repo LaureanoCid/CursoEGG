@@ -41,6 +41,5 @@ public class Rectangulo implements calculosFormas{
     public void perimetro(){
         double perim = (this.base+this.altura)*2;
         System.out.println("El perimetro del rectangulo es: " + perim);
-    }
-    
+    }    
 }
