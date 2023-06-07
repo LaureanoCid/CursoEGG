@@ -23,5 +23,4 @@ public class BarcoMotor extends Barco {
     public double modulo() {
         return super.modulo()+potenciaCV;
     }
-
 }

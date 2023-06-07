@@ -95,7 +95,5 @@ public class Alquiler {
         long diasAlquiler = ChronoUnit.DAYS.between(fechaAlquiler, fechaDevolucion);
 
         return diasAlquiler;
-    }
-
-    
+    }    
 }

@@ -21,6 +21,5 @@ public class Velero extends Barco{
     @Override
     public double modulo() {
         return super.modulo()+numMastil;
-    }
-    
+    }    
 }

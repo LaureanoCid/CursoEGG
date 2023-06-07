@@ -21,6 +21,5 @@ public class Yate extends BarcoMotor{
     @Override
     public double modulo() {
         return super.modulo()+numCamarote;
-    }
-    
+    }    
 }

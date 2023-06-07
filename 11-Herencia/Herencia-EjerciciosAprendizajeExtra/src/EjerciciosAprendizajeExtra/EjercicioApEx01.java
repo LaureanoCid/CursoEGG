@@ -28,5 +28,6 @@ public class EjercicioApEx01 {
         int op = 0;
         Alquiler usuario = new Alquiler();
         usuario.crearUsuario();                
-    }    
+    }  
+    
 }
