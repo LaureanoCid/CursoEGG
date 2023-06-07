@@ -69,7 +69,6 @@ Finalmente, en el main debemos realizar lo siguiente:
  */
 package EjerciciosAprendizaje;
 
-import Objetos.Electrodomestico;
 import Objetos.Lavadora;
 import Objetos.Televisor;
 import java.util.Scanner;

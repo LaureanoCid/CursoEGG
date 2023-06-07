@@ -35,4 +35,5 @@ public class Lavadora extends Electrodomestico{
             this.precio += 500;
         }
     }
+    
 }

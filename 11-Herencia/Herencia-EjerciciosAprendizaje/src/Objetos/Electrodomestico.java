@@ -110,5 +110,5 @@ public class Electrodomestico {
         if (this.peso >= 80) {
             this.precio += 1000;
         }
-    }
+    }    
 }
