@@ -20,8 +20,13 @@ precio final de su alquiler.
  */
 package EjerciciosAprendizajeExtra;
 
+import Objetos.Alquiler;
+
 public class EjercicioApEx01 {
 
     public static void main(String[] args) {
+        int op = 0;
+        Alquiler usuario = new Alquiler();
+        usuario.crearUsuario();                
     }    
 }
