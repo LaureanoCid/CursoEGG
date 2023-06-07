@@ -8,5 +8,6 @@ public class Animal implements Despedida{
     @Override
     public void despedirse() {
         System.out.println("Chaitoo");
-    }    
+    }  
+    
 }

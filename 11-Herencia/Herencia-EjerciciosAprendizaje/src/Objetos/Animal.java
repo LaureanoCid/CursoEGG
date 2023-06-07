@@ -19,4 +19,5 @@ public class Animal {
     public void alimentarse(){
         System.out.println(nombre + " come: " + alimento);
     }
+    
 }

@@ -27,5 +27,6 @@ public class EjercicioGuia01 {
         for (Animal aux : animales) {
             aux.hacerRuido();
         }
-    }    
+    }   
+    
 }

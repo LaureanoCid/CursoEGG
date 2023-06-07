@@ -22,4 +22,5 @@ public class EjercicioGuia02 {
             aux.despedirse();
         }
     }    
+    
 }
