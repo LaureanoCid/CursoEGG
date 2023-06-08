@@ -1,6 +1,7 @@
 package Objeto;
 
 public class Fraccion {  
+    
     private int numerador1;
     private int numerador2;
     private int denominador1;
