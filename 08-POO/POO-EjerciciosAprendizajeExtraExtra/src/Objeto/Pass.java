@@ -43,4 +43,5 @@ public class Pass {
     public String toString() {
         return "Pass{" + "pass=" + pass + ", nombre=" + nombre + ", dni=" + dni + '}';
     }   
+    
 }
