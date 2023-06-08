@@ -28,4 +28,5 @@ public class Cafetera {
     public void setCantidadActual(double cantidadActual) {
         this.cantidadActual = cantidadActual;
     }
+    
 }

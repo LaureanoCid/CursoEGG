@@ -28,4 +28,5 @@ public class Rectangulo {
     public void setAltura(double altura) {
         this.altura = altura;
     }
+    
 }

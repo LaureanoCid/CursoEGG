@@ -24,4 +24,5 @@ public class POOEjAp04 {
         service.superficieRectangulo(rec);
         service.dibujarRectangulo(rec);
     }
+    
 }

@@ -58,4 +58,5 @@ public class CuentaServicio {
     public void consultarDatos(Cuenta cuenta1) {
         System.out.println(cuenta1.toString());
     }
+    
 }

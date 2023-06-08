@@ -46,4 +46,5 @@ public class CafeteraServicio {
         cafetera.setCantidadActual(cafetera.getCantidadActual() + leer.nextInt());
         System.out.println("Se ha agregado su cafe. Ahora cuenta con " + cafetera.getCantidadActual() + " ml de cafe.");
     }
+    
 }

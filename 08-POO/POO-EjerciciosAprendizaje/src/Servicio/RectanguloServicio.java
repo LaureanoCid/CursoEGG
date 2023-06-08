@@ -43,4 +43,5 @@ public class RectanguloServicio {
             System.out.println("");
         }
     }
+    
 }
