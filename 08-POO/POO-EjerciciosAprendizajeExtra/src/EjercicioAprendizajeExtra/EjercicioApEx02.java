@@ -15,4 +15,5 @@ public class EjercicioApEx02 {
         Puntos p1 = service.crearPuntos();
         System.out.println("La distancia entre los dos puntos es: " + service.calcularDistancia(p1));
     }        
+    
 }

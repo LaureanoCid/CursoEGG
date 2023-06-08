@@ -46,5 +46,6 @@ public class Puntos {
 
     public void setY2(int y2) {
         this.y2 = y2;
-    }            
+    }   
+    
 }

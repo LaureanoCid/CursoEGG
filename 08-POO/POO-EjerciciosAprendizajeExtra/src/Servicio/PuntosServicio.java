@@ -28,4 +28,5 @@ public class PuntosServicio {
         distancia = Math.sqrt((Math.pow((p1.getX2()-p1.getX1()), 2))+(Math.pow((p1.getY2()-p1.getY1()), 2)));
         return distancia;
     }
+    
 }
