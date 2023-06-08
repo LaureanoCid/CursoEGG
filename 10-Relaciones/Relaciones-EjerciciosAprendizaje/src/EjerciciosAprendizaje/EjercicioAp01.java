@@ -22,4 +22,5 @@ public class EjercicioAp01 {
         System.out.println(p1.toString());
         System.out.println(p2.toString());
     }    
+    
 }

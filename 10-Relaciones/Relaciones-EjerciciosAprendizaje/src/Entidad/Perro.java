@@ -51,5 +51,6 @@ public class Perro {
     @Override
     public String toString() {
         return "Perro[" + "Nombre = " + nombre + " - Raza = " + raza + " - Edad = " + edad + " - Tamanio = " + tamanio + ']';
-    }        
+    }
+    
 }
