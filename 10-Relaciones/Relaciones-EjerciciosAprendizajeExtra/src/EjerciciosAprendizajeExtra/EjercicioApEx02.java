@@ -36,5 +36,6 @@ public class EjercicioApEx02 {
         Cine cine1 = new Cine();
         cine1.CargarDatos();
         cine1.Llenarcine();
-    }    
+    }   
+    
 }
