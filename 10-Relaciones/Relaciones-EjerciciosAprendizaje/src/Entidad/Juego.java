@@ -80,5 +80,5 @@ public class Juego {
             System.out.println(jugador.toString());
         }
         System.out.println("----------------");
-    }
+    }    
 }

@@ -43,5 +43,6 @@ public class EjercicioAp02 {
         Juego juego = new Juego();
         juego.crearJuego(rev);
         juego.ronda(rev, juego);
-    }    
+    }  
+    
 }

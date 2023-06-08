@@ -34,4 +34,5 @@ public class Revolver {
     public void siguienteChorro(Revolver rev) {
         posicionActual++;
     }
+    
 }
