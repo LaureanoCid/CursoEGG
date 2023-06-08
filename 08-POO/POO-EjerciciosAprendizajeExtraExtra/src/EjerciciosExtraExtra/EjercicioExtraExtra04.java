@@ -18,7 +18,6 @@ package EjerciciosExtraExtra;
 
 public class EjercicioExtraExtra04 {
 
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {        
     }    
 }
