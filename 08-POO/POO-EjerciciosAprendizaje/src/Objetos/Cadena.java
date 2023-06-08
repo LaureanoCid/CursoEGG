@@ -28,4 +28,5 @@ public class Cadena {
     public void setLongitud(int longitud) {
         this.longitud = longitud;
     }
+    
 }

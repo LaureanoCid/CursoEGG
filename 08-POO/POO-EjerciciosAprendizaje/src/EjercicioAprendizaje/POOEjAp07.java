@@ -63,4 +63,5 @@ public class POOEjAp07 {
         System.out.println("Hay " + menorPeso + " con bajo peso, " + pesoIdeal + " con peso ideal y " + mayorPeso + " con sobre peso.");
         System.out.println("Hay " + mayorEdad + " personas mayores y " + menorEdad + " personas menores de edad.");
     }
+    
 }
