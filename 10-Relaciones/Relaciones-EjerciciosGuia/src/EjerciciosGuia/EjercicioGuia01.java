@@ -9,4 +9,5 @@ public class EjercicioGuia01 {
         Persona p1 = new Persona("Laureano", "Cid", new Dni(40454454, 'A'));
         System.out.println(p1.toString());
     } 
+    
 }

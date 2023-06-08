@@ -42,4 +42,5 @@ public class Persona {
     public String toString() {
         return "Persona[" + "" + nombre + " - " + apellido + " - DNI = " + numero + ']';
     }   
+    
 }

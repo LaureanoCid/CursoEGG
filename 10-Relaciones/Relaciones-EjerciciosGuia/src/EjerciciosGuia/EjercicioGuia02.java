@@ -31,5 +31,6 @@ public class EjercicioGuia02 {
         for (Jugador j1 : jugadores) {
             System.out.println(j1.toString());
         }
-    }    
+    } 
+    
 }

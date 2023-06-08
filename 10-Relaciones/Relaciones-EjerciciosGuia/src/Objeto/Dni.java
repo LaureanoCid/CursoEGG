@@ -31,5 +31,6 @@ public class Dni {
     @Override
     public String toString() {
         return "[Numero = " + numero + " - Caracter = " + caracter + ']';
-    }        
+    }      
+    
 }
