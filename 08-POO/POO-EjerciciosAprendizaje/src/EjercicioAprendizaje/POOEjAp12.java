@@ -27,5 +27,6 @@ public class POOEjAp12 {
         int edad = service.calcularEdad(persona);
         System.out.println("Usted es menor?: " + service.menorQue(edad));
         service.mostrarPersona(persona);
-    }    
+    }  
+    
 }

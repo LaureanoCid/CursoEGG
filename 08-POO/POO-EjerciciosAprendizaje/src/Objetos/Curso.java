@@ -71,5 +71,6 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso[" + "Nombre del Curso = " + nombreCurso + "]-[Cantidad de Horas Por Dia = " + cantidadHorasPorDia + "]-[Cantidad de Dias Por Semana = " + cantidadDiasPorSemana + "]-[Turno = " + turno + "]-[Precio Por Hora = $" + precioPorHora + "]";
-    }        
+    }   
+    
 }

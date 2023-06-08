@@ -31,4 +31,5 @@ public class POOEjAp13 {
         Curso curso1 = service.crearCurso();
         service.calcularGananciaSemanal(curso1);
     }
+    
 }

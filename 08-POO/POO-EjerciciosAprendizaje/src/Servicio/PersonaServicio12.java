@@ -58,6 +58,5 @@ public class PersonaServicio12 {
 
     public void mostrarPersona(Persona12 persona) {
         System.out.println(persona.toString());
-    }
-    
+    }    
 }

@@ -42,4 +42,5 @@ public class CursoServicio {
         double gananciaSemanal = curso1.getPrecioPorHora() * curso1.getCantidadHorasPorDia() * curso1.getCantidadDiasPorSemana() * curso1.getAlumnos().length;
         System.out.println("Usted tendrá una ganancia semanal de: $" + gananciaSemanal);
     }
+    
 }

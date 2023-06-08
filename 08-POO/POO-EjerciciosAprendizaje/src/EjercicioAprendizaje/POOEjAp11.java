@@ -29,7 +29,6 @@ public class POOEjAp11 {
         Date fechaActual = new Date();
         System.out.println("La fecha ingresada es: " + fecha.toString());
         System.out.println("Hay " + (fechaActual.getYear() - fecha.getYear()) + " anios de diferencia.");
-        System.out.println("La fecha actual es: " + fechaActual.toString());
-        
+        System.out.println("La fecha actual es: " + fechaActual.toString());        
     }
 }
