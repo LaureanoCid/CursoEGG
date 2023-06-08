@@ -21,5 +21,6 @@ public class Adivinanza {
 
     public void setAdivinanza(String adivinanza) {
         this.adivinanza = adivinanza;
-    }        
+    }      
+    
 }

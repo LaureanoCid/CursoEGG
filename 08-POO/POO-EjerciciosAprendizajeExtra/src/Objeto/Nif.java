@@ -26,5 +26,6 @@ public class Nif {
 
     public void setNif(String nif) {
         this.nif = nif;
-    }        
+    }    
+    
 }

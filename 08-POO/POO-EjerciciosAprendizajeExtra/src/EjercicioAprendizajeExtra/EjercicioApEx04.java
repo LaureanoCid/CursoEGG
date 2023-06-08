@@ -48,5 +48,6 @@ public class EjercicioApEx04 {
         NifServicio service = new NifServicio();
         Nif nif = service.crearNif();        
         service.mostrarNif(nif);
-    }        
+    }    
+    
 }

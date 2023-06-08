@@ -14,7 +14,6 @@ public class AdivinanzaServicio {
             System.out.println("Ha fallado! Ingrese un mes nuevamente: ");
             mes = leer.next().toLowerCase();
         }
-        System.out.println("Felicidades! has acertado!");
-        
+        System.out.println("Felicidades! has acertado!");        
     }
 }
