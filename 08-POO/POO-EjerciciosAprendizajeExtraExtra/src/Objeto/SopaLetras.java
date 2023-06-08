@@ -27,4 +27,5 @@ public class SopaLetras {
     public void setPalabra(String palabra) {
         this.palabra = palabra;
     }
+    
 }
