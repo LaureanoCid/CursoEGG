@@ -50,6 +50,5 @@ public class Alumno {
     @Override
     public String toString() {
         return "Alumno[" + nombreCompleto + "] - [Dni = " + Dni + "] - [Cantidad de votos = " + cantidadVotos + ']';
-    }
-    
+    }    
 }

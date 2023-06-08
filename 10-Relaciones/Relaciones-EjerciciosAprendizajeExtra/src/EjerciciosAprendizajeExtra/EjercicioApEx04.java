@@ -57,5 +57,6 @@ public class EjercicioApEx04 {
         System.out.println("-------------------");
         simu.facilitador();
         System.out.println("-------------------");        
-    }    
+    }  
+    
 }
