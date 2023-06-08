@@ -30,5 +30,7 @@ public class EjercicioApEx03 {
 
     public static void main(String[] args) {
         
+        //Solo se realizó diagrama
+        
     }    
 }

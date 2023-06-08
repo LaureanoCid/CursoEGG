@@ -9,4 +9,5 @@ public class Cuotas {
     private boolean cuotaPaga;
     private LocalTime fechaVencimientoCuota;
     private String [] formaPAgoCuota;
+    
 }

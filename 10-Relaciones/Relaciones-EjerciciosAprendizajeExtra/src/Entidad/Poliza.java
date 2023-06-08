@@ -12,4 +12,5 @@ public class Poliza {
     private LocalTime fechaInicio;
     private double montoTotal;
     private String tipoCobertura;
+    
 }
