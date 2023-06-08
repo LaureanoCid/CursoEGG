@@ -60,6 +60,5 @@ public class Ahorcado {
     @Override
     public String toString() {
         return "Ahorcado[" + "Palabra A Buscar = " + palabraABuscar + "]--[Cantidad De Vidas = " + cantidadVidas + "]";
-    }
-    
+    }    
 }

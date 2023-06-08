@@ -97,4 +97,5 @@ public class AhorcadoServicio {
     public void intentos(Ahorcado juego) {
         System.out.println("A usted le quedan " + juego.getCantidadVidas() + " intentos.");
     }
+    
 }

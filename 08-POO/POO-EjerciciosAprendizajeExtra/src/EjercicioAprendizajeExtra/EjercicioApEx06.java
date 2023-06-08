@@ -30,7 +30,6 @@ public class EjercicioApEx06 {
     public static void main(String[] args) {
         AhorcadoServicio service = new AhorcadoServicio();
         Ahorcado juego = new Ahorcado();
-        service.juego(juego);
-        
+        service.juego(juego);        
     }        
 }
