@@ -36,4 +36,5 @@ public class POOEjAp10 {
             System.out.println("[" + i + " = " + arreglo2[i] + "]");
         }
     }
+    
 }
