@@ -46,9 +46,94 @@ Realizar un sistema de consulta que le permite al usuario consultar por diferent
  */
 package EjerciciosAprendizajeExtra;
 
+import Objetos.Alojamiento;
+import Objetos.Camping;
+import Objetos.Hotel;
+import Objetos.Hotel4;
+import Objetos.Hotel5;
+import Objetos.Residencia;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
 public class EjercicioApEx03 {
 
     public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        int op = 0;
+        ArrayList<Alojamiento> alojamientos = new ArrayList();
+        Hotel[] hoteles = {new Hotel4('A', "Rest1", 40, 10, 2, 5, 0, "Hotel1", "Direcc1", "Bragado", "Gerente1"),
+        new Hotel4('B', "Rest2", 50, 5, 1, 10, 0, "Hotel2", "Direcc2", "Bragado", "Gerente2"),
+        new Hotel5(2, 3, 10, 'A', "Rest3", 40, 10, 2, 5, 0, "Hotel3", "Direcc3", "Bragado", "Gerente3"),
+        new Hotel5(7, 2, 20, 'B', "Rest4", 50, 5, 1, 10, 0, "Hotel4", "Direcc4", "Bragado", "Gerente4")
+        };
+        //Hoteles 4 Star
+        alojamientos.add(new Hotel4('A', "Rest1", 40, 10, 2, 5, 0, "Hotel1", "Direcc1", "Bragado", "Gerente1"));
+        alojamientos.add(new Hotel4('B', "Rest2", 50, 5, 1, 10, 0, "Hotel2", "Direcc2", "Bragado", "Gerente2"));        
         
-    }    
+        //Hoteles 5 Star
+        alojamientos.add(new Hotel5(2, 3, 10, 'A', "Rest3", 40, 10, 2, 5, 0, "Hotel3", "Direcc3", "Bragado", "Gerente3"));
+        alojamientos.add(new Hotel5(7, 2, 20, 'B', "Rest4", 50, 5, 1, 10, 0, "Hotel4", "Direcc4", "Bragado", "Gerente4"));        
+        
+        //Campings
+        alojamientos.add(new Camping(50, 5, true, false, 200, "Camping1", "Direcc5", "Bragado", "Gerente5"));
+        alojamientos.add(new Camping(35, 10, false, false, 150, "Camping2", "Direcc6", "Bragado", "Gerente6"));
+
+        //Residencias
+        alojamientos.add(new Residencia(10, false, true, true, 300, "Residencia1", "Direcc7", "Bragado", "Gerente7"));
+        alojamientos.add(new Residencia(8, true, false, false, 150, "Residencia2", "Direcc8", "Bragado", "Gerente8"));
+
+        do {
+            System.out.println("""
+                               ---------------------------------------
+                               -----------------MENU------------------
+                               1 - Ver todos los alojamientos
+                               2 - Hoteles del mas caro al mas barato
+                               3 - Campings con restaurante
+                               4 - Residencias con descuentos
+                               5 - Salir
+                               ---------------------------------------
+                               """);
+            op = leer.nextInt();
+            switch (op) {
+                case 1:
+                    for (Alojamiento aux : alojamientos) {
+                        System.out.println("---------------------------------------");
+                        System.out.println(aux.toString());
+                        System.out.println("---------------------------------------");
+                    }
+                    break;
+                case 2:
+                    Arrays.sort(hoteles, Comparator.comparingDouble(Hotel::getPrecioHabitacion).reversed());
+                    for (Hotel aux : hoteles) {
+                        System.out.println(aux.toString());
+                    }
+                    break;
+                case 3:
+                    for (Alojamiento aux : alojamientos) {
+                        if (aux instanceof Camping) {
+                            if (((Camping) aux).isRestaurante()) {
+                                System.out.println(aux.toString());
+                            }
+                        }
+                    }
+                    break;
+                case 4:
+                    for (Alojamiento aux : alojamientos) {
+                        if (aux instanceof Residencia){
+                            if (((Residencia) aux).isDescuento()) {
+                                System.out.println(aux.toString());
+                            }
+                        }
+                    }
+                    break;
+                case 5:
+                    System.out.println("Saliendo . . .");
+                    break;
+                default:
+                    System.out.println("Error! Ingrese una opcion valida!");
+            }
+        } while (op != 5);
+    }
 }
