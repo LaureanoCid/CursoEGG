@@ -35,5 +35,6 @@ public class JavaIntroEjAp16 {
         }else{
             System.out.println("EL numero " + num + " se ha encontrado " + contador + " veces.");
         } 
-    }   
+    }  
+    
 }

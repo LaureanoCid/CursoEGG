@@ -42,4 +42,5 @@ public class JavaIntroEjAp12 {
         System.out.println("Cadenas correctas " + correcta);
         System.out.println("Cadenas incorrectas " + incorrecta);
     }
+    
 }
