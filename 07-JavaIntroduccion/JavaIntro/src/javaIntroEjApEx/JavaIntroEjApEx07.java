@@ -39,4 +39,5 @@ public class JavaIntroEjApEx07 {
         System.out.println("El numero mayor es: " + mayor);
         System.out.println("El promedio es: " + (promedio/n));       
     }   
+    
 }
