@@ -21,5 +21,6 @@ public class JavaIntroEj14 {
         for(int i=0; i<equipo.length ;i++){
             System.out.println((i+1) + " - " + equipo[i]);            
         } 
-    }    
+    }  
+    
 }

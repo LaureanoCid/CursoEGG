@@ -31,4 +31,5 @@ public class JavaIntroEj12 {
             System.out.println("No es multiplo");
         }
     }
+    
 }

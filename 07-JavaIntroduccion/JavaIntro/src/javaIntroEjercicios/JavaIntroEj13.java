@@ -20,5 +20,6 @@ public class JavaIntroEj13 {
         for(i=0;i<6;i++){
             System.out.print(nombres[i]+", ");
         }
-    }    
+    }  
+    
 }
