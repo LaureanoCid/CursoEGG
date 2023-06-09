@@ -25,4 +25,5 @@ public class JavaIntroEj06 {
             System.out.println("Ninguno de los numeros es mayor a 25");
         }
     }
+    
 }

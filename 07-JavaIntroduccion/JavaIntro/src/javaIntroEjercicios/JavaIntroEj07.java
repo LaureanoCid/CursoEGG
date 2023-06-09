@@ -44,5 +44,6 @@ public class JavaIntroEj07 {
                 System.out.println("No existe un valor válido para este tipo de bomba");
                 break;
         }
-    }    
+    }  
+    
 }

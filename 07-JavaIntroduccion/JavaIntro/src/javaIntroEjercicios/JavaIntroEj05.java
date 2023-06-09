@@ -18,4 +18,5 @@ public class JavaIntroEj05 {
         System.out.println("Ingrese una letra: ");
         char inicial = leer.next().charAt(0);  
     }
+    
 }

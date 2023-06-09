@@ -18,4 +18,5 @@ public class JavaIntroEj08 {
             System.out.println("La nota ingrasada es: " + nota + "");
         }while (nota > 10 || nota < 0);   
     }    
+    
 }
