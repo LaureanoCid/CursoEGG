@@ -63,5 +63,6 @@ public class JavaIntroEjAp20 {
         }else{
             System.out.println("la matriz No es mñagica");
         }
-    }   
+    }  
+    
 }

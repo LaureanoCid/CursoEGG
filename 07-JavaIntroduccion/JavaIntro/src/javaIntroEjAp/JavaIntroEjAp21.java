@@ -77,5 +77,6 @@ public class JavaIntroEjAp21 {
             k++;
         }        
         return comp;
-    }                   
+    }  
+    
 }

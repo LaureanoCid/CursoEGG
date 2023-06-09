@@ -21,4 +21,5 @@ public class JavaIntroEjApEx01 {
         System.out.println("La cantidad de horas es: " + (minutos/60));
         System.out.println("La cantidad de dias es: " + (minutos/1440));
     }
+    
 }
