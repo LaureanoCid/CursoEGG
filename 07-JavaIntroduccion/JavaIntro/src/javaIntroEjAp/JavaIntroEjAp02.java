@@ -14,5 +14,6 @@ public class JavaIntroEjAp02 {
         System.out.println("Introduce un nombre: ");
         cadena = leer.nextLine();
         System.out.println("Mi nombre es " + cadena);    
-    }    
+    }   
+    
 }

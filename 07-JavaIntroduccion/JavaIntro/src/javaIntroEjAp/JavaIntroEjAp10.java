@@ -26,5 +26,6 @@ public class JavaIntroEjAp10 {
             } while (suma <= limite);
         
         System.out.println("La suma " + suma + " supero al Limite: " + limite);        
-    }    
+    }  
+    
 }

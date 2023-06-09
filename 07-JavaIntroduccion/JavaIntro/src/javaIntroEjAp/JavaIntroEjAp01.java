@@ -22,4 +22,5 @@ public class JavaIntroEjAp01 {
 
         System.out.println( "La suma de " + n1 + " más " + n2 + " es " + suma + "." );
     }    
+    
 }

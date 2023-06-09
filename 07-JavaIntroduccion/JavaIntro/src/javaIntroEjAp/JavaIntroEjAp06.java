@@ -22,4 +22,5 @@ public class JavaIntroEjAp06 {
             System.out.println("EL NUMERO ES IMPAR!");
         }
     }   
+    
 }

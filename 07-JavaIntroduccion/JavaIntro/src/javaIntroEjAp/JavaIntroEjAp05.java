@@ -17,5 +17,6 @@ public class JavaIntroEjAp05 {
         System.out.println("el doble de ese número es: "+(num*2));
         System.out.println("el triple de ese número es: "+(num*3));
         System.out.println("la raíz cuadrada (aproximada) de ese número es: "+Math.sqrt(num));
-    }    
+    }   
+    
 }
