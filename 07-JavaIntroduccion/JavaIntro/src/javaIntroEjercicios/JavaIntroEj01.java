@@ -13,5 +13,6 @@ public class JavaIntroEj01 {
         long numeroLargo ;
         byte numChico ;
         double Numero ;             
-    }    
+    }  
+    
 }

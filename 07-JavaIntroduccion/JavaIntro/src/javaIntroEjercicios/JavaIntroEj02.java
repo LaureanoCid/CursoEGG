@@ -14,5 +14,6 @@ public class JavaIntroEj02 {
         String nombre = leer.next();
         
         System.out.println("Su nombre es: " + nombre);
-    }   
+    }  
+    
 }
