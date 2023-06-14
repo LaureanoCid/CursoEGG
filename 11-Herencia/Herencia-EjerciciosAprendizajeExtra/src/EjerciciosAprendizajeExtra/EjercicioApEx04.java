@@ -26,9 +26,12 @@ que instancie objetos de los distintos tipos y pruebe los métodos desarrollados
  */
 package EjerciciosAprendizajeExtra;
 
+import Servicio.Servicio04;
+
 public class EjercicioApEx04 {
 
     public static void main(String[] args) {
-        
-    }    
+        Servicio04 service = new Servicio04();
+        service.menu();
+    }
 }
