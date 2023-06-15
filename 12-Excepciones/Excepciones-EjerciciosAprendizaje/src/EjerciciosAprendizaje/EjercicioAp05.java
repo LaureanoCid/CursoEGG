@@ -40,8 +40,7 @@ public class EjercicioAp05 {
                 cont++;
                 leer.nextLine();
             }
-        } while (nAleatorio != n);
-        
+        } while (nAleatorio != n);        
         System.out.println("Has acertado! :)");
         System.out.println("Has hecho " + cont + " intentos.");
     }

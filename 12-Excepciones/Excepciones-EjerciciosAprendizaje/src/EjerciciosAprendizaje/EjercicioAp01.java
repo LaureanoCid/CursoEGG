@@ -16,7 +16,6 @@ public class EjercicioAp01 {
             per1.mayorDeEdad(per1);
         }catch (NullPointerException e) {
             System.out.println("La persona no ha sido creada");
-        }
-        
+        }        
     }    
 }

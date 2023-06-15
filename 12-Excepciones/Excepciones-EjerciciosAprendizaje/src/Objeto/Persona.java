@@ -67,7 +67,6 @@ public class Persona {
 
         return mayorEdad;
     }
-
     @Override
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", peso=" + peso + ", altura=" + altura + '}';

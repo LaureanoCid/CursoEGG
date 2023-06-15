@@ -32,5 +32,6 @@ public class EjercicioAp04 {
         } catch (ArithmeticException ex) {
             System.out.println("Error! Noo puede dividir a un numero por cero!");
         }
+        
     }
 }

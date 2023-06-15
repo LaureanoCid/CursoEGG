@@ -39,7 +39,6 @@ public class DivisionNumero {
             
         } catch (NumberFormatException ex) {
             System.out.println("Uno de los numeros no es valido!");
-        }
-        
+        }        
     }
 }
