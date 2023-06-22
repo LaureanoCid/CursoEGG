@@ -1,0 +1,16 @@
+1) ¿Qué es una base de datos?
+D - Una colección organizada de información estructurada.
+
+2) ¿Qué es una tabla?
+D - Todas son correctas.
+
+3) ¿Cuál de estos no es un tipo de base de datos?
+C - Base de datos imperativa.
+
+4) ¿Cuál de estas SI es una ventaja al trabajar el almacenamiento de los datos con bases de
+datos en lugar de hojas de cálculo?
+A - Los datos están más protegidos.
+
+5) En las bases de datos relacionales existe un elemento clave que identifica a cada registro
+o fila y la hace única, ¿cómo se llama ese elemento?
+C - Llave primaria.
