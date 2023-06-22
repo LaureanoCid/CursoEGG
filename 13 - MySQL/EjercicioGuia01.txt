@@ -13,4 +13,4 @@ A - Los datos están más protegidos.
 
 5) En las bases de datos relacionales existe un elemento clave que identifica a cada registro
 o fila y la hace única, ¿cómo se llama ese elemento?
-C - Llave primaria.
+C - Llave primaria. 

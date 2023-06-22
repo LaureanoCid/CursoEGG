@@ -1,0 +1,22 @@
+1. ¡Ahora ejecutaremos un script y crearemos una base de datos por primera vez! Primero,
+deberemos abrir el script llamado “superhéroes.sql” y ejecutarlo de modo tal que se cree
+la base de datos y todas sus tablas.
+-Completo
+
+2. Analiza el script detenidamente, línea por línea, ayudándote con la guía. Intenta
+comprender qué pasa en cada sentencia del script. Luego contesta:
+
+2.1) ¿Cuántas columnas posee la tabla “creador”?
+C) - 2
+
+2.2) ¿Cuántas columnas numéricas posee la tabla “personaje”?
+Ninguna opción) - 7
+
+2.3) ¿Cuántas columnas de la tabla “personaje” pueden ser nulas?
+Ninguna opción) - 1
+
+2.4) ¿Qué significa la primera línea del script?
+C) - Elimina la base de datos en caso de ya estar creada.
+
+3. Elimina la base de datos “superhéroes.sql”.
+-Completo

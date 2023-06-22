@@ -1,0 +1,14 @@
+Marca verdadero o falso. Justifica tus respuestas. Luego, compara tus respuestas con tus
+compañeros de mesa.
+
+• Para que exista una relación se requiere de una llave foránea.
+-Verdadero
+
+• Pueden existir relaciones entre tablas de muchos a muchos.
+-Verdadero
+
+• En un diagrama ERD con una llave dorada se identifica la llave foránea.
+-Falso
+
+• Existen cuatro tipos de relaciones entre tablas.
+-Falso

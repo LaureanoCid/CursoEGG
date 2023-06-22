@@ -1,0 +1,24 @@
+1) Primero deberás localizar en ambas tablas los siguientes elementos:
+A) - Llaves primarias
+-id_casa
+-id_usuario
+
+B) - Llave foránea
+-id_casa en tabla usuario
+
+C) - Un campo que almacena datos de tipo carácter
+-calle
+
+D) - Los atributos de cada tabla
+-Tabla Casa: id_casa; calle; numeracion; es_departamento
+-Tabla Usuario: id_usuario; nombre; apellido; id_casa
+
+E) - Una tupla
+854267 - Noelia - Devito - 163748
+
+2) Compara tus respuestas con las de tus compañeros: recuerda abordar cada duda que
+tengas, a partir de ellas es que fortalecemos el aprendizaje.
+- Compartido y corregido.
+
+3) ¿Cuál es la función de una llave primaria? Selecciona la opción correcta:
+D) - Todas las anteriores son correctas
