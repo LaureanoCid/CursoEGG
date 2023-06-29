@@ -38,6 +38,7 @@ SELECT jugadores.nombre AS 'Jugador',(SELECT ROUND(SUM(Puntos_por_partido)) FROM
 
 -- 13. Mostrar el nombre del equipo, conferencia y división del jugador más alto de la NBA.
 
+
 -- 14. Mostrar la media de puntos en partidos de los equipos de la división Pacific.
 
 -- 15. Mostrar el partido o partidos (equipo_local, equipo_visitante y diferencia) con mayor diferencia de puntos.
