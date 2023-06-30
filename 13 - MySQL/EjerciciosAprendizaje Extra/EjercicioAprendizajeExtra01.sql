@@ -34,17 +34,28 @@ SELECT jugadores.nombre AS 'Jugador',(SELECT ROUND(SUM(Puntos_por_partido)) FROM
 SELECT nombre_equipo AS 'Equipo', COUNT(nombre_equipo) AS 'Cantidad' FROM jugadores GROUP BY nombre_equipo;
 
 -- 12. Mostrar el jugador que más puntos ha realizado en toda su carrera.
-SELECT jugadores.nombre AS 'Jugador',(SELECT ROUND(SUM(Puntos_por_partido)) FROM estadisticas WHERE jugador = codigo) AS PuntosTotales FROM jugadores ORDER BY PuntosTotales DESC Limit 1;
+SELECT jugadores.nombre AS 'Jugador',(SELECT ROUND(SUM(Puntos_por_partido)) FROM estadisticas WHERE jugador = codigo) AS PuntosTotales 
+FROM jugadores ORDER BY PuntosTotales DESC Limit 1;
 
 -- 13. Mostrar el nombre del equipo, conferencia y división del jugador más alto de la NBA.
-
+SELECT Nombre, Conferencia, Division FROM equipos WHERE Nombre  = (SELECT jugadores.Nombre_equipo FROM jugadores ORDER BY jugadores.Altura DESC LIMIT 1);
 
 -- 14. Mostrar la media de puntos en partidos de los equipos de la división Pacific.
+SELECT equipo_local AS 'Local', ROUND(AVG(puntos_local)) AS 'Media de puntos' 
+FROM partidos INNER JOIN equipos ON partidos.equipo_local = equipos.nombre WHERE equipos.division = 'Pacific' GROUP BY partidos.equipo_local;
 
 -- 15. Mostrar el partido o partidos (equipo_local, equipo_visitante y diferencia) con mayor diferencia de puntos.
+SELECT equipo_local AS 'Local', equipo_visitante AS 'Visitante', ABS((puntos_local-puntos_visitante)) AS 'Diferencia' 
+FROM partidos WHERE ABS(puntos_local-puntos_visitante) = (SELECT max(ABS(puntos_local-puntos_visitante)) FROM partidos);
 
 -- 16. Mostrar la media de puntos en partidos de los equipos de la división Pacific.
+-- Ya realizado en el 14.
 
 -- 17. Mostrar los puntos de cada equipo en los partidos, tanto de local como de visitante.
+SELECT equipo_local AS 'Local', puntos_local AS 'Puntos Local', puntos_visitante AS 'Puntos Visitante', equipo_visitante AS 'Visitante'
+FROM partidos;
 
 -- 18. Mostrar quien gana en cada partido (codigo, equipo_local, equipo_visitante, equipo_ganador), en caso de empate sera null.
+SELECT codigo AS 'Codigo', equipo_local AS 'Local', puntos_local AS 'Puntos Local', puntos_visitante AS 'Puntos Visitante', equipo_visitante AS 'Visitante', 
+(SELECT CASE WHEN (puntos_local> puntos_visitante) THEN equipo_local WHEN (puntos_local< puntos_visitante) THEN equipo_visitante ELSE 'Empate' END) AS 'Equipo Ganador'
+FROM partidos;
