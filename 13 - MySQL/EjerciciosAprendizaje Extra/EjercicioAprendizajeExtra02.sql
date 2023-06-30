@@ -2,22 +2,43 @@ USE jardineria;
 
 -- Consultas sobre una tabla
 -- 1. Devuelve un listado con el código de oficina y la ciudad donde hay oficinas.
+SELECT codigo_oficina AS 'codigo', ciudad AS 'Ciudad' FROM oficina;
+
 -- 2. Devuelve un listado con la ciudad y el teléfono de las oficinas de España.
+SELECT ciudad AS 'Ciudad', telefono AS 'Telefono' FROM oficina WHERE pais LIKE 'España';
+
 -- 3. Devuelve un listado con el nombre, apellidos y email de los empleados cuyo jefe tiene un código de jefe igual a 7.
+SELECT nombre AS 'Nombre',apellido1 AS 'Apellido', email AS 'Email' FROM empleado WHERE codigo_jefe = 7;
+
 -- 4. Devuelve el nombre del puesto, nombre, apellidos y email del jefe de la empresa.
+SELECT puesto AS 'Puesto', nombre AS 'Nombre', apellido1 AS 'Apellido', email AS 'Email' FROM empleado WHERE puesto LIKE'Director General';
+
 -- 5. Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados que no sean representantes de ventas.
+SELECT nombre AS 'Nombre', apellido1 AS 'Apellido', puesto AS 'Puesto' from empleado WHERE puesto NOT LIKE 'Representante ventas';
+
 -- 6. Devuelve un listado con el nombre de los todos los clientes españoles.
+SELECT nombre_cliente AS 'Nombre', pais AS 'Pais' FROM cliente WHERE pais LIKE 'Spain';
+
 -- 7. Devuelve un listado con los distintos estados por los que puede pasar un pedido.
+SELECT DISTINCT estado AS 'Estado' FROM pedido;
+
 -- 8. Devuelve un listado con el código de cliente de aquellos clientes que realizaron algún pago en 2008. 
 -- Tenga en cuenta que deberá eliminar aquellos códigos de cliente que aparezcan repetidos. Resuelva la consulta:
 -- o Utilizando la función YEAR de MySQL.
 -- o Utilizando la función DATE_FORMAT de MySQL.
 -- o Sin utilizar ninguna de las funciones anteriores.
+SELECT codigo_cliente AS 'Codigo Cliente', fecha_pago AS 'Fecha de pago' FROM pago WHERE fecha_pago LIKE '%2008%';
+
 -- 9. Devuelve un listado con el código de pedido, código de cliente, fecha esperada y fecha de entrega de los pedidos que no han sido entregados a tiempo.
+SELECT codigo_pedido AS 'Codigo de pedido', codigo_cliente AS 'Codigo de cliente', fecha_esperada AS 'Fecha esperada', fecha_entrega AS 'Fecha de entrega'
+FROM pedido WHERE fecha_entrega < fecha_esperada;
+
 -- 10. Devuelve un listado con el código de pedido, código de cliente, fecha esperada y fecha de entrega de los pedidos 
 -- cuya fecha de entrega ha sido al menos dos días antes de la fecha esperada.
 -- o Utilizando la función ADDDATE de MySQL.
 -- o Utilizando la función DATEDIFF de MySQL.
+
+
 -- 11. Devuelve un listado de todos los pedidos que fueron rechazados en 2009.
 -- 12. Devuelve un listado de todos los pedidos que han sido entregados en el mes de enero de cualquier año.
 -- 13. Devuelve un listado con todos los pagos que se realizaron en el año 2008 mediante Paypal. Ordene el resultado de mayor a menor.
