@@ -66,50 +66,83 @@ SELECT cliente.nombre_cliente AS 'Cliente', CONCAT(empleado.nombre, ' ', emplead
 FROM cliente INNER JOIN empleado ON cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado;
 
 -- 2. Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas.
+SELECT DISTINCT cliente.nombre_cliente AS 'Cliente', CONCAT(empleado.nombre, ' ', empleado.apellido1, ' ', empleado.apellido2) Nombre_Representante
+FROM cliente INNER JOIN empleado ON cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado INNER JOIN pago ON cliente.codigo_cliente = pago.codigo_cliente;
 
 -- 3. Muestra el nombre de los clientes que no hayan realizado pagos junto con el nombre de sus representantes de ventas.
+SELECT cliente.nombre_cliente AS 'Cliente', CONCAT(empleado.nombre, ' ', empleado.apellido1, ' ', empleado.apellido2) Nombre_Representante
+FROM cliente INNER JOIN empleado ON cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado 
+WHERE cliente.codigo_cliente NOT IN (SELECT codigo_cliente FROM pago);
 
 -- 4. Devuelve el nombre de los clientes que han hecho pagos y el nombre de sus representantes junto con la ciudad de la oficina a la que pertenece el 
 -- representante.
+SELECT DISTINCT cliente.nombre_cliente AS 'Cliente', CONCAT(empleado.nombre, ' ', empleado.apellido1, ' ', empleado.apellido2) Nombre_Representante, 
+(SELECT ciudad FROM oficina WHERE codigo_oficina = empleado.codigo_oficina) AS 'Ciudad'
+FROM cliente INNER JOIN empleado ON cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado INNER JOIN pago ON cliente.codigo_cliente = pago.codigo_cliente;
 
 -- 5. Devuelve el nombre de los clientes que no hayan hecho pagos y el nombre de sus representantes junto con la ciudad de la 
 -- oficina a la que pertenece el representante.
-
+SELECT cliente.nombre_cliente AS 'Cliente', CONCAT(empleado.nombre, ' ', empleado.apellido1, ' ', empleado.apellido2) Nombre_Representante,
+(SELECT ciudad FROM oficina WHERE codigo_oficina = empleado.codigo_oficina) AS 'Ciudad'
+FROM cliente INNER JOIN empleado ON cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado 
+WHERE cliente.codigo_cliente NOT IN (SELECT codigo_cliente FROM pago);
 
 -- 6. Lista la dirección de las oficinas que tengan clientes en Fuenlabrada.
-
+SELECT oficina.codigo_oficina AS 'Codigo', oficina.linea_direccion1 AS 'Direccion-1', oficina.linea_direccion2 AS 'Direccion-2'
+FROM oficina INNER JOIN empleado ON oficina.codigo_oficina = empleado.codigo_oficina 
+INNER JOIN cliente ON empleado.codigo_empleado = cliente.codigo_empleado_rep_ventas WHERE cliente.ciudad = 'Fuenlabrada';
 
 -- 7. Devuelve el nombre de los clientes y el nombre de sus representantes junto con la ciudad de la oficina a la que pertenece el representante.
-
+SELECT cliente.nombre_cliente AS Nombre, CONCAT(empleado.nombre,' ', empleado.apellido1,' ', empleado.apellido2) Nombre_Representante, oficina.ciudad AS Ciudad
+FROM oficina INNER JOIN empleado ON oficina.codigo_oficina = empleado.codigo_oficina 
+INNER JOIN cliente ON empleado.codigo_empleado = cliente.codigo_empleado_rep_ventas;
 
 -- 8. Devuelve un listado con el nombre de los empleados junto con el nombre de sus jefes.
-
+SELECT CONCAT(A.nombre,' ', A.apellido1,' ', A.apellido2) 'Jefe', A.codigo_empleado AS 'Codigo-Jefe', CONCAT(B.nombre,' ', B.apellido1,' ', B.apellido2) AS 'Empleado', B.codigo_empleado AS 'Codigo-Empleado' 
+FROM empleado A JOIN empleado B ON  A.codigo_jefe = B.codigo_empleado;
 
 -- 9. Devuelve el nombre de los clientes a los que no se les ha entregado a tiempo un pedido.
-
+SELECT DISTINCT cliente.nombre_cliente AS 'Cliente' FROM cliente JOIN pedido ON cliente.codigo_cliente = pedido.Codigo_cliente WHERE pedido.fecha_esperada < pedido.fecha_entrega;
 
 -- 10. Devuelve un listado de las diferentes gamas de producto que ha comprado cada cliente.
-
+SELECT DISTINCT producto.gama AS Gama, cliente.nombre_cliente AS Cliente 
+FROM cliente INNER JOIN pedido ON cliente.codigo_cliente = pedido.codigo_cliente 
+INNER JOIN detalle_pedido ON pedido.codigo_pedido = detalle_pedido.codigo_pedido 
+INNER JOIN producto ON detalle_pedido.codigo_producto = producto.codigo_producto;
 
 -- Consultas multitabla (Composición externa)
 -- Resuelva todas las consultas utilizando las cláusulas LEFT JOIN, RIGHT JOIN, JOIN.
 -- 1. Devuelve un listado que muestre solamente los clientes que no han realizado ningún pago.
-
+SELECT DISTINCT nombre_cliente AS 'Cliente' FROM cliente
+LEFT JOIN pago ON cliente.codigo_cliente = pago.codigo_cliente
+WHERE cliente.codigo_cliente NOT IN (SELECT codigo_cliente FROM pago);
 
 -- 2. Devuelve un listado que muestre solamente los clientes que no han realizado ningún pedido.
-
+SELECT DISTINCT nombre_cliente AS 'Cliente' FROM cliente
+LEFT JOIN pedido ON cliente.codigo_cliente = pedido.codigo_cliente
+WHERE cliente.codigo_cliente NOT IN (SELECT codigo_cliente FROM pedido);
 
 -- 3. Devuelve un listado que muestre los clientes que no han realizado ningún pago y los que no han realizado ningún pedido.
-
+SELECT DISTINCT nombre_cliente AS 'Cliente' FROM cliente
+LEFT JOIN pedido ON cliente.codigo_cliente = pedido.codigo_cliente
+LEFT JOIN pago ON cliente.codigo_cliente = pago.codigo_cliente
+WHERE (cliente.codigo_cliente NOT IN (SELECT codigo_cliente FROM pedido)) AND (cliente.codigo_cliente NOT IN (SELECT codigo_cliente FROM pago));
 
 -- 4. Devuelve un listado que muestre solamente los empleados que no tienen una oficina asociada.
-
+SELECT nombre AS 'Empleado' FROM empleado
+LEFT JOIN oficina ON empleado.codigo_oficina = oficina.codigo_oficina
+WHERE oficina.codigo_oficina IS NULL;
 
 -- 5. Devuelve un listado que muestre solamente los empleados que no tienen un cliente asociado.
-
+SELECT empleado.* FROM empleado
+LEFT JOIN cliente ON empleado.codigo_empleado = cliente.codigo_empleado_rep_ventas
+WHERE cliente.codigo_empleado_rep_ventas IS NULL;
 
 -- 6. Devuelve un listado que muestre los empleados que no tienen una oficina asociada y los que no tienen un cliente asociado.
-
+SELECT empleado.* FROM cliente
+RIGHT JOIN empleado ON cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado
+LEFT JOIN oficina ON empleado.codigo_oficina = oficina.codigo_oficina
+WHERE (cliente.codigo_empleado_rep_ventas IS NULL) AND (oficina.codigo_oficina IS NULL);
 
 -- 7. Devuelve un listado de los productos que nunca han aparecido en un pedido.
 
