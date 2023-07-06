@@ -139,13 +139,12 @@ LEFT JOIN cliente ON empleado.codigo_empleado = cliente.codigo_empleado_rep_vent
 WHERE cliente.codigo_empleado_rep_ventas IS NULL;
 
 -- 6. Devuelve un listado que muestre los empleados que no tienen una oficina asociada y los que no tienen un cliente asociado.
-SELECT empleado.* FROM cliente
-RIGHT JOIN empleado ON cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado
-LEFT JOIN oficina ON empleado.codigo_oficina = oficina.codigo_oficina
-WHERE (cliente.codigo_empleado_rep_ventas IS NULL) AND (oficina.codigo_oficina IS NULL);
+SELECT empleado.* FROM empleado LEFT JOIN cliente ON  empleado.codigo_empleado = cliente.codigo_empleado_rep_ventas WHERE cliente.codigo_cliente IS NULL
+UNION SELECT empleado.* FROM empleado LEFT JOIN oficina ON empleado.codigo_oficina = oficina.codigo_oficina WHERE oficina.codigo_oficina IS NULL;
 
 -- 7. Devuelve un listado de los productos que nunca han aparecido en un pedido.
-
+SELECT * FROM producto LEFT JOIN detalle_pedido ON producto.codigo_producto = detalle_pedido.codigo_producto 
+WHERE detalle_pedido.codigo_pedido IS NULL;
 
 -- 8. Devuelve las oficinas donde no trabajan ninguno de los empleados que hayan sido los representantes de ventas 
 -- de algún cliente que haya realizado la compra de algún producto de la gama Frutales.
