@@ -148,7 +148,12 @@ WHERE detalle_pedido.codigo_pedido IS NULL;
 
 -- 8. Devuelve las oficinas donde no trabajan ninguno de los empleados que hayan sido los representantes de ventas 
 -- de algún cliente que haya realizado la compra de algún producto de la gama Frutales.
-
+SELECT oficina.codigo_oficina, producto.gama FROM oficina 
+JOIN empleado ON oficina.codigo_oficina = empleado.codigo_oficina 
+JOIN cliente ON cliente.codigo_empleado_rep_ventas != e.codigo_empleado 
+JOIN pedido ON 
+JOIN producto ON 
+WHERE producto.gama LIKE 'frutales' GROUP BY p.gama;
 
 -- 9. Devuelve un listado con los clientes que han realizado algún pedido, pero no han realizado ningún pago.
 
