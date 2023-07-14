@@ -1,8 +1,25 @@
 package Tienda.persistencia;
 
 import Tienda.entidades.Fabricante;
+import java.util.ArrayList;
 
 public class DAOFabricante extends DAO{
+    
+    public int consultarCodigoF(int codigo) throws Exception{
+        try {
+            String sql = "SELECT codigo FROM fabricante ORDER BY codigo DESC LIMIT 1";
+            consultarBase(sql);
+            while (resultado.next()) {
+                codigo = resultado.getInt("codigo");
+            }                        
+            desconectarBase();
+        } catch (Exception e) {
+            e.printStackTrace();
+            desconectarBase();
+            throw e;
+        }
+        return codigo;
+    }
     
      public void crearFabricante(Fabricante fabricante) throws Exception {
         try {
@@ -15,6 +32,34 @@ public class DAOFabricante extends DAO{
             insertarModificarEliminar(sql);
         } catch (Exception e) {
             desconectarBase();
+            throw e;
+        }
+    }
+     
+    public void mostrarFabricantes(ArrayList<String> nombres) throws Exception{
+        try {
+            String sql = "SELECT codigo, nombre FROM fabricante";
+            consultarBase(sql);            
+            while (resultado.next()) {
+                nombres.add(resultado.getString("codigo") + " - " + resultado.getString("nombre"));
+            }
+            desconectarBase();
+        } catch (Exception e) {
+            e.printStackTrace();
+            desconectarBase();
+            throw e;
+        }
+    }
+         
+    //7
+    public void ingresarFabricante(String sql) throws Exception{
+        try {            
+            insertarModificarEliminar(sql);                                   
+            desconectarBase();            
+        } catch (Exception e) {
+            e.printStackTrace();
+            desconectarBase();
+            
             throw e;
         }
     }

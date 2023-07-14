@@ -1,5 +1,6 @@
 package tienda1;
 
+import Tienda.servicios.fabricanteServicio;
 import Tienda.servicios.productoServicio;
 import java.util.Scanner;
 
@@ -8,6 +9,7 @@ public class EjercicioAp01 {
     public static void main(String[] args) throws Exception{
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         productoServicio serviceP = new productoServicio();
+        fabricanteServicio serviceF = new fabricanteServicio();
         
         int op = 0;
         do {
@@ -20,7 +22,8 @@ public class EjercicioAp01 {
             System.out.println("6 - Ingresar producto nuevo");
             System.out.println("7 - Ingresar fabricante nuevo");
             System.out.println("8 - Editar datos de producto");
-            System.out.println("9 - Salir");
+            System.out.println("9 - Eliminar producto");
+            System.out.println("10 - Salir");
             System.out.println("----------------@----------------");
             op = leer.nextInt();
 
@@ -43,23 +46,31 @@ public class EjercicioAp01 {
                     break; 
                 case 5:
                     //E)Listar el nombre y el precio del producto más barato. 
+                    serviceP.listarProductoMasBarato();
                     break;
                 case 6:
                     //F)Ingresar un producto a la base de datos.
+                    serviceP.ingresarProducto();
                     break;
                 case 7:
                     //G)Ingresar un fabricante a la base de datos.
+                    serviceF.ingresarFabricante();
                     break;
                 case 8:
                     //H)Editar un producto con datos a elección.
+                    serviceP.modificarProducto();
                     break;
-                case 9:
+                case 9:                       
+                    //Eliminar producto
+                    serviceP.eliminarProducto();
+                    break;
+                case 10:
                     System.out.println("Saliendo. . . .");
                     break;
                 default:
                     System.out.println("Error. Vuelva a ingresar una opcion");
                     break;
             }
-        } while (op != 9);
+        } while (op != 10);
     }    
 }

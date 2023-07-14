@@ -1,6 +1,7 @@
 package Tienda.entidades;
 
 public class Fabricante {
+    
     private int codigo;
     private String nombre;
 
