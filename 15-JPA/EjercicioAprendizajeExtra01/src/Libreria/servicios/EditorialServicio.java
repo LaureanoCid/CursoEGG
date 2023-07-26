@@ -9,8 +9,11 @@ import Libreria.persistencia.EditorialJpaController;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ *
+ * @author agus_
+ */
 public class EditorialServicio {
-
     EditorialJpaController editorialJPA = new EditorialJpaController();
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     Editorial editorial = new Editorial();

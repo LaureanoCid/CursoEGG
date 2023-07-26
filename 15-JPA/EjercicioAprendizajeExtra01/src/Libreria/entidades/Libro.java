@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package Libreria.entidades;
 
 import java.io.Serializable;
@@ -8,13 +12,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+/**
+ *
+ * @author agus_
+ */
 @Entity
 public class Libro implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
     
     @Basic
     private String titulo;
@@ -33,7 +41,7 @@ public class Libro implements Serializable {
     public Libro() {
     }
 
-    public Libro(Integer id, String titulo, Integer anio, Integer ejemplares, Integer ejemplaresPrestados, Integer ejemplaresRestantes, Boolean alta, Autor autor, Editorial editorial) {
+    public Libro(Long id, String titulo, Integer anio, Integer ejemplares, Integer ejemplaresPrestados, Integer ejemplaresRestantes, Boolean alta, Autor autor, Editorial editorial) {
         this.id = id;
         this.titulo = titulo;
         this.anio = anio;
@@ -43,14 +51,6 @@ public class Libro implements Serializable {
         this.alta = alta;
         this.autor = autor;
         this.editorial = editorial;
-    }    
-    
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getTitulo() {
@@ -115,7 +115,15 @@ public class Libro implements Serializable {
 
     public void setEditorial(Editorial editorial) {
         this.editorial = editorial;
-    }    
+    }        
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     @Override
     public int hashCode() {
@@ -139,7 +147,7 @@ public class Libro implements Serializable {
 
     @Override
     public String toString() {
-        return "Id = " + id + " -- Nombre = " + titulo;
+        return "Libreria.entidades.Libro[ id=" + id + " ]";
     }
     
 }

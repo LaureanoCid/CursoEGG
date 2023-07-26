@@ -5,8 +5,8 @@
 package Libreria.servicios;
 
 import Libreria.entidades.Autor;
+import Libreria.exceptions.NonexistentEntityException;
 import Libreria.persistencia.AutorJpaController;
-import Libreria.persistencia.exceptions.NonexistentEntityException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,7 +15,6 @@ import java.util.Scanner;
  * @author agus_
  */
 public class AutorServicio {
-
     AutorJpaController autorJPA = new AutorJpaController();
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     Autor autor = new Autor();

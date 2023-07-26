@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package Libreria.entidades;
 
 import java.io.Serializable;
@@ -7,14 +11,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ *
+ * @author agus_
+ */
 @Entity
 public class Autor implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    
+    private Long id;
+        
     @Basic
     private String nombre;
     private Boolean alta;
@@ -22,18 +30,10 @@ public class Autor implements Serializable {
     public Autor() {
     }
 
-    public Autor(Integer id, String nombre, Boolean alta) {
+    public Autor(Long id, String nombre, Boolean alta) {
         this.id = id;
         this.nombre = nombre;
         this.alta = alta;
-    }        
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -51,6 +51,14 @@ public class Autor implements Serializable {
     public void setAlta(Boolean alta) {
         this.alta = alta;
     }        
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     @Override
     public int hashCode() {
@@ -74,7 +82,7 @@ public class Autor implements Serializable {
 
     @Override
     public String toString() {
-        return "Id = " + id + " -- Nombre = " + nombre;
+        return "Libreria.entidades.Autor[ id=" + id + " ]";
     }
     
 }

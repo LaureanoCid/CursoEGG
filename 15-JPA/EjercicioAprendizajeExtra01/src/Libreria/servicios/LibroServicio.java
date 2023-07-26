@@ -18,7 +18,6 @@ import java.util.Scanner;
  * @author agus_
  */
 public class LibroServicio {
-
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     AutorJpaController autorJpa = new AutorJpaController();
     LibroJpaController libroJpa = new LibroJpaController();
