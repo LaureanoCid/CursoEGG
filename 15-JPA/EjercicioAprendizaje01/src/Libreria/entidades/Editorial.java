@@ -75,6 +75,5 @@ public class Editorial implements Serializable {
     @Override
     public String toString() {
         return "Id = " + id + " -- Editorial = " + nombre + " -- Alta = " + alta;
-    }
-    
+    }    
 }

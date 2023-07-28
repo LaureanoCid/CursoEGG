@@ -137,5 +137,6 @@ public class LibroJpaController implements Serializable {
         } finally {
             em.close();
         }
-    }    
+    }   
+    
 }

@@ -25,10 +25,9 @@ public class LibroServicio {
     EditorialJpaController editorialJpa = new EditorialJpaController();
     AutorServicio autorS = new AutorServicio();
     EditorialServicio editorialS = new EditorialServicio();
-    Libro libro = new Libro();
 
     public void crearLibro() throws Exception {
-
+        Libro libro = new Libro();
         try {
             boolean repetido = false;
             System.out.println("-----------------------");
@@ -70,17 +69,23 @@ public class LibroServicio {
             autorS.mostrarAutor();
             System.out.println("Ingrese el ID del autor");
             int idA = leer.nextInt();
-            Autor autor = autorJpa.getEntityManager().find(Autor.class, idA);
-            libro.setAutor(autor);
-
-            editorialS.mostrarEditoriales();
-            System.out.println("Ingrese el ID de la editorial");
-            int idE = leer.nextInt();
-            Editorial editorial = editorialJpa.getEntityManager().find(Editorial.class, idE);
-            libro.setEditorial(editorial);
-
-            libroJpa.create(libro);
-            System.out.println("Alta exitosa!");
+            if (!(autorJpa.getEntityManager().find(Autor.class, idA) == null)) {
+                Autor autor = autorJpa.getEntityManager().find(Autor.class, idA);
+                libro.setAutor(autor);
+                editorialS.mostrarEditoriales();
+                System.out.println("Ingrese el ID de la editorial");
+                int idE = leer.nextInt();
+                if (!(editorialJpa.getEntityManager().find(Editorial.class, idE) == null)) {
+                    Editorial editorial = editorialJpa.getEntityManager().find(Editorial.class, idE);
+                    libro.setEditorial(editorial);
+                    libroJpa.create(libro);
+                    System.out.println("Alta exitosa!");
+                } else {
+                    System.out.println("Error! Editorial no encontrada! Cree una nueva!");
+                }
+            } else {
+                System.out.println("Error! Autor no encontrado! Cree uno nuevo!");
+            }
             System.out.println("-----------------------");
         } catch (Exception e) {
             throw e;
@@ -103,8 +108,13 @@ public class LibroServicio {
             System.out.println("-----------------------");
             mostrarLibros();
             System.out.println("Ingrese el ID a eliminar: ");
-            libroJpa.destroy(leer.nextInt());
-            System.out.println("Baja exitosa!!");
+            int idL = leer.nextInt();
+            if (!(libroJpa.getEntityManager().find(Libro.class, idL) == null)) {
+                libroJpa.destroy(idL);
+                System.out.println("Baja exitosa!!");
+            } else {
+                System.out.println("Error! Libro no encontrado!");
+            }
             System.out.println("-----------------------");
         } catch (Exception e) {
             throw e;
@@ -117,72 +127,95 @@ public class LibroServicio {
             mostrarLibros();
             System.out.println("Ingrese el ID a editar: ");
             int idL = leer.nextInt();
-            Libro libro = libroJpa.getEntityManager().find(Libro.class, idL);
-            System.out.println("Que desea editar? \n1: Titulo \n2: Anio del libro \n3: Cantidad de ejemplares \n4: Ejemplares prestados \n5: Autor \n6: Editorial");
-            int op = leer.nextInt();
-            switch (op) {
-                case 1:
-                    boolean repetido = false;
-                    System.out.println("El titulo es: " + libro.getTitulo());
-                    System.out.println("Ingrese el titulo del libro a cambiar: ");
-                    libro.setTitulo(leer.next());
-                    do {
-                        repetido = false;
-                        List<Libro> listaLibros = libroJpa.findLibroEntities();
-                        while (libro.getTitulo().trim().isEmpty()) {
-                            System.out.println("Error! Ingrese el titulo de su libro: ");
-                            libro.setTitulo(leer.nextLine());
-                        }
-                        for (Libro aux : listaLibros) {
-                            if (aux.getTitulo().equalsIgnoreCase(libro.getTitulo())) {
-                                repetido = true;
-                                System.out.println("Autor existente! Ingrese un nuevo nombre: ");
+            if (!(libroJpa.getEntityManager().find(Libro.class, idL) == null)) {
+                Libro libro = libroJpa.getEntityManager().find(Libro.class, idL);
+                System.out.println("Que desea editar? \n1: Titulo \n2: Anio del libro \n3: Cantidad de ejemplares \n4: Ejemplares prestados \n5: Autor \n6: Editorial");
+                int op = leer.nextInt();
+                switch (op) {
+                    case 1:
+                        boolean repetido = false;
+                        System.out.println("El titulo es: " + libro.getTitulo());
+                        System.out.println("Ingrese el titulo del libro a cambiar: ");
+                        libro.setTitulo(leer.next());
+                        do {
+                            repetido = false;
+                            List<Libro> listaLibros = libroJpa.findLibroEntities();
+                            while (libro.getTitulo().trim().isEmpty()) {
+                                System.out.println("Error! Ingrese el titulo de su libro: ");
                                 libro.setTitulo(leer.nextLine());
                             }
-                        }
-                    } while (repetido);
-                    break;
-                case 2:
-                    System.out.println("El anio actual es: " + libro.getAnio());
-                    System.out.println("Ingrese año del libro a cambiar: ");
-                    libro.setAnio(leer.nextInt());
-                    break;
-                case 3:
-                    System.out.println("La cantidad actual de ejemplares es: " + libro.getEjemplares());
-                    System.out.println("Ingrese la cantidad de ejemplares");
-                    libro.setEjemplares(leer.nextInt());
-                    break;
-                case 4:
-                    System.out.println("La cantidad actual de ejemplares prestado es: " + libro.getEjemplaresPrestados());
-                    System.out.println("Ingrese la cantidad de ejemplares prestados");
-                    libro.setEjemplaresPrestados(leer.nextInt());
-                    while (libro.getEjemplares() < libro.getEjemplaresPrestados()) {
-                        System.out.println("Error! La cantidad de ejemplares prestados no puede superar al stock!");
-                        System.out.println("Ingrese la cantidad de ejemplares prestados: ");
+                            for (Libro aux : listaLibros) {
+                                if (aux.getTitulo().equalsIgnoreCase(libro.getTitulo())) {
+                                    repetido = true;
+                                    System.out.println("Autor existente! Ingrese un nuevo nombre: ");
+                                    libro.setTitulo(leer.nextLine());
+                                }
+                            }
+                        } while (repetido);
+                        libroJpa.edit(libro);
+                        System.out.println("Edicion exitosa!");
+                        break;
+                    case 2:
+                        System.out.println("El anio actual es: " + libro.getAnio());
+                        System.out.println("Ingrese año del libro a cambiar: ");
+                        libro.setAnio(leer.nextInt());
+                        libroJpa.edit(libro);
+                        System.out.println("Edicion exitosa!");
+                        break;
+                    case 3:
+                        System.out.println("La cantidad actual de ejemplares es: " + libro.getEjemplares());
+                        System.out.println("Ingrese la cantidad de ejemplares");
+                        libro.setEjemplares(leer.nextInt());
+                        libroJpa.edit(libro);
+                        System.out.println("Edicion exitosa!");
+                        break;
+                    case 4:
+                        System.out.println("La cantidad actual de ejemplares prestado es: " + libro.getEjemplaresPrestados());
+                        System.out.println("Ingrese la cantidad de ejemplares prestados");
                         libro.setEjemplaresPrestados(leer.nextInt());
-                    }
-                    break;
-                case 5:
-                    System.out.println("El autor actual es: " + libro.getAutor().getNombre());
-                    autorS.mostrarAutor();
-                    System.out.println("Ingrese el ID del autor");
-                    int idA = leer.nextInt();
-                    Autor autor = autorJpa.getEntityManager().find(Autor.class, idA);
-                    libro.setAutor(autor);
-                    break;
-                case 6:
-                    System.out.println("La editorial actual es: " + libro.getEditorial().getNombre());
-                    editorialS.mostrarEditoriales();
-                    System.out.println("Ingrese el ID de la editorial");
-                    int idE = leer.nextInt();
-                    Editorial editorial = editorialJpa.getEntityManager().find(Editorial.class, idE);
-                    libro.setEditorial(editorial);
-                    break;
-                default:
-                    System.out.println("Error. Ingrese una opcion valida!");
+                        while (libro.getEjemplares() < libro.getEjemplaresPrestados()) {
+                            System.out.println("Error! La cantidad de ejemplares prestados no puede superar al stock!");
+                            System.out.println("Ingrese la cantidad de ejemplares prestados: ");
+                            libro.setEjemplaresPrestados(leer.nextInt());
+                        }
+                        libroJpa.edit(libro);
+                        System.out.println("Edicion exitosa!");
+                        break;
+                    case 5:
+                        System.out.println("El autor actual es: " + libro.getAutor().getNombre());
+                        autorS.mostrarAutor();
+                        System.out.println("Ingrese el ID del autor");
+                        int idA = leer.nextInt();
+                        if (!(autorJpa.getEntityManager().find(Autor.class, idA) == null)) {
+                            Autor autor = autorJpa.getEntityManager().find(Autor.class, idA);
+                            libro.setAutor(autor);
+                            libroJpa.edit(libro);
+                            System.out.println("Edicion exitosa!");
+                        } else {
+                            System.out.println("Error! Autor no encontrado!");
+                        }
+                        break;
+                    case 6:
+                        System.out.println("La editorial actual es: " + libro.getEditorial().getNombre());
+                        editorialS.mostrarEditoriales();
+                        System.out.println("Ingrese el ID de la editorial");
+                        int idE = leer.nextInt();
+                        if (!(editorialJpa.getEntityManager().find(Editorial.class, idE) == null)) {
+                            Editorial editorial = editorialJpa.getEntityManager().find(Editorial.class, idE);
+                            libro.setEditorial(editorial);
+                            libroJpa.edit(libro);
+                            System.out.println("Edicion exitosa!");
+                        } else {
+                            System.out.println("Error! Editorial no encontrada!");
+                        }
+
+                        break;
+                    default:
+                        System.out.println("Error. Ingrese una opcion valida!");
+                }
+            } else {
+                System.out.println("Error! Libro no encontrado!");
             }
-            libroJpa.edit(libro);
-            System.out.println("Edicion exitosa!");
             System.out.println("-----------------------");
         } catch (Exception e) {
             throw e;
@@ -240,15 +273,19 @@ public class LibroServicio {
             autorS.mostrarAutor();
             System.out.println("Seleccione el id del autor: ");
             int idA = leer.nextInt();
-            List<Libro> listaLibros = libroJpa.findLibroEntities();
-            for (Libro aux : listaLibros) {
-                if (aux.getAutor().getId() == idA) {
-                    System.out.println(aux.toString());
-                    encontrado = true;
+            if (!(autorJpa.getEntityManager().find(Autor.class, idA) == null)) {
+                List<Libro> listaLibros = libroJpa.findLibroEntities();
+                for (Libro aux : listaLibros) {
+                    if (aux.getAutor().getId() == idA) {
+                        System.out.println(aux.toString());
+                        encontrado = true;
+                    }
                 }
-            }
-            if (encontrado == false) {
-                System.out.println("El libro no existe!");
+                if (encontrado == false) {
+                    System.out.println("El libro no existe!");
+                }
+            } else {
+                System.out.println("Error! Autor no encontrado!");
             }
             System.out.println("-----------------------");
         } catch (Exception e) {
@@ -263,15 +300,19 @@ public class LibroServicio {
             editorialS.mostrarEditoriales();
             System.out.println("Seleccione el id de la editorial: ");
             int idE = leer.nextInt();
-            List<Libro> listaLibros = libroJpa.findLibroEntities();
-            for (Libro aux : listaLibros) {
-                if (aux.getEditorial().getId() == idE) {
-                    System.out.println(aux.toString());
-                    encontrado = true;
+            if (!(editorialJpa.getEntityManager().find(Editorial.class, idE) == null)) {
+                List<Libro> listaLibros = libroJpa.findLibroEntities();
+                for (Libro aux : listaLibros) {
+                    if (aux.getEditorial().getId() == idE) {
+                        System.out.println(aux.toString());
+                        encontrado = true;
+                    }
                 }
-            }
-            if (encontrado == false) {
-                System.out.println("El libro no existe!");
+                if (encontrado == false) {
+                    System.out.println("El libro no existe!");
+                }
+            }else{
+                System.out.println("Error! Editorial no encontrada!");
             }
             System.out.println("-----------------------");
         } catch (Exception e) {

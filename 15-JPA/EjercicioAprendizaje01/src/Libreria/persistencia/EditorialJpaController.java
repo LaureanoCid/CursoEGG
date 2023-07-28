@@ -137,4 +137,5 @@ public class EditorialJpaController implements Serializable {
             em.close();
         }
     }    
+    
 }

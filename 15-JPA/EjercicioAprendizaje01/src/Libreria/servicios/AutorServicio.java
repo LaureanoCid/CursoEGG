@@ -18,10 +18,9 @@ public class AutorServicio {
 
     AutorJpaController autorJPA = new AutorJpaController();
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    Autor autor = new Autor();
 
     public void crearAutor() {
-
+        Autor autor = new Autor();
         try {
             boolean repetido = false;
             System.out.println("-----------------------");
@@ -70,8 +69,13 @@ public class AutorServicio {
             System.out.println("-----------------------");
             mostrarAutor();
             System.out.println("Ingrese el ID a eliminar: ");
-            autorJPA.destroy(leer.nextInt());
-            System.out.println("Baja exitosa!!");
+            int idA = leer.nextInt();
+            if (!(autorJPA.getEntityManager().find(Autor.class, idA) == null)) {
+                autorJPA.destroy(idA);
+                System.out.println("Baja exitosa!!");
+            } else {
+                System.out.println("Error! Autor no encontrado!");
+            }
             System.out.println("-----------------------");
         } catch (Exception ex) {
             throw ex;
@@ -84,27 +88,31 @@ public class AutorServicio {
             boolean repetido = false;
             mostrarAutor();
             System.out.println("Ingrese el ID a editar: ");
-            int idA = leer.nextInt();
-            Autor autor = autorJPA.getEntityManager().find(Autor.class, idA);
-            System.out.println("Ingrese el nuevo nombre del autor: ");
-            autor.setNombre(leer.next());
-            do {
-                repetido = false;
-                List<Autor> listaAutores = autorJPA.findAutorEntities();
-                while (autor.getNombre().trim().isEmpty()) {
-                    System.out.println("Error! Ingrese el nombre de su autor: ");
-                    autor.setNombre(leer.nextLine());
-                }
-                for (Autor aux : listaAutores) {
-                    if (aux.getNombre().equalsIgnoreCase(autor.getNombre())) {
-                        repetido = true;
-                        System.out.println("Autor existente! Ingrese un nuevo nombre: ");
+            int idA = leer.nextInt();            
+            if (!(autorJPA.getEntityManager().find(Autor.class, idA) == null)) {
+                Autor autor = autorJPA.getEntityManager().find(Autor.class, idA);
+                do {
+                    System.out.println("Ingrese el nuevo nombre del autor: ");
+                    autor.setNombre(leer.next());
+                    repetido = false;
+                    List<Autor> listaAutores = autorJPA.findAutorEntities();
+                    while (autor.getNombre().trim().isEmpty()) {
+                        System.out.println("Error! Ingrese el nombre de su autor: ");
                         autor.setNombre(leer.nextLine());
                     }
-                }
-            } while (repetido);
-            autorJPA.edit(autor);
-            System.out.println("Edicion exitosa!");
+                    for (Autor aux : listaAutores) {
+                        if (aux.getNombre().equalsIgnoreCase(autor.getNombre())) {
+                            repetido = true;
+                            System.out.println("Autor existente! Ingrese un nuevo nombre: ");
+                            autor.setNombre(leer.nextLine());
+                        }
+                    }
+                } while (repetido);
+                autorJPA.edit(autor);
+                System.out.println("Edicion exitosa!");
+            } else {
+                System.out.println("Error! Autor no encontrado!");
+            }
             System.out.println("-----------------------");
         } catch (Exception e) {
             throw e;

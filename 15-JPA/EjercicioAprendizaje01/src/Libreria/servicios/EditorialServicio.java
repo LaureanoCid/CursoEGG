@@ -13,10 +13,9 @@ public class EditorialServicio {
 
     EditorialJpaController editorialJPA = new EditorialJpaController();
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    Editorial editorial = new Editorial();
 
     public void crearEditorial() {
-
+        Editorial editorial = new Editorial();
         try {
             boolean repetido = false;
             System.out.println("-----------------------");
@@ -66,8 +65,12 @@ public class EditorialServicio {
             mostrarEditoriales();
             System.out.println("Ingrese el ID de la editorial a eliminar: ");
             int idE = leer.nextInt();
-            editorialJPA.destroy(leer.nextInt());
-            System.out.println("Baja exitosa!");
+            if (!(editorialJPA.getEntityManager().find(Editorial.class, idE) == null)) {
+                editorialJPA.destroy(idE);
+                System.out.println("Baja exitosa!");
+            } else {
+                System.out.println("Error! Editorial no encontrada!");
+            }
             System.out.println("-----------------------");
         } catch (Exception e) {
             throw e;
@@ -80,30 +83,35 @@ public class EditorialServicio {
             boolean repetido = false;
             mostrarEditoriales();
             System.out.println("Ingrese el ID a editar: ");
-            int idA = leer.nextInt();
-            Editorial editorial = editorialJPA.getEntityManager().find(Editorial.class, idA);
-            System.out.println("Ingrese el nuevo nombre de la editorial: ");
-            editorial.setNombre(leer.next());
-            do {
-                repetido = false;
-                List<Editorial> listaEditorial = editorialJPA.findEditorialEntities();
-                while (editorial.getNombre().trim().isEmpty()) {
-                    System.out.println("Error! Ingrese el nombre de su editorial: ");
-                    editorial.setNombre(leer.nextLine());
-                }
-                for (Editorial aux : listaEditorial) {
-                    if (aux.getNombre().equalsIgnoreCase(editorial.getNombre())) {
-                        repetido = true;
-                        System.out.println("Editorial existente! Ingrese un nuevo nombre: ");
+            int idE = leer.nextInt();
+            if (!(editorialJPA.getEntityManager().find(Editorial.class, idE) == null)) {
+                Editorial editorial = editorialJPA.getEntityManager().find(Editorial.class, idE);
+                System.out.println("Ingrese el nuevo nombre de la editorial: ");
+                editorial.setNombre(leer.next());
+                do {
+                    repetido = false;
+                    List<Editorial> listaEditorial = editorialJPA.findEditorialEntities();
+                    while (editorial.getNombre().trim().isEmpty()) {
+                        System.out.println("Error! Ingrese el nombre de su editorial: ");
                         editorial.setNombre(leer.nextLine());
                     }
-                }
-            } while (repetido);
-            editorialJPA.edit(editorial);
-            System.out.println("Edicion exitosa!");
+                    for (Editorial aux : listaEditorial) {
+                        if (aux.getNombre().equalsIgnoreCase(editorial.getNombre())) {
+                            repetido = true;
+                            System.out.println("Editorial existente! Ingrese un nuevo nombre: ");
+                            editorial.setNombre(leer.nextLine());
+                        }
+                    }
+                } while (repetido);
+                editorialJPA.edit(editorial);
+                System.out.println("Edicion exitosa!");
+            }else{
+                System.out.println("Error! Editorial no encontrada!");
+            }
             System.out.println("-----------------------");
         } catch (Exception e) {
             throw e;
         }
     }
+
 }
