@@ -59,7 +59,7 @@ public class EditorialJpaController implements Serializable {
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Long id = editorial.getId();
+                Integer id = editorial.getId();
                 if (findEditorial(id) == null) {
                     throw new NonexistentEntityException("The editorial with id " + id + " no longer exists.");
                 }
@@ -117,7 +117,7 @@ public class EditorialJpaController implements Serializable {
         }
     }
 
-    public Editorial findEditorial(Long id) {
+    public Editorial findEditorial(Integer id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Editorial.class, id);
@@ -137,6 +137,5 @@ public class EditorialJpaController implements Serializable {
         } finally {
             em.close();
         }
-    }
-    
+    }    
 }

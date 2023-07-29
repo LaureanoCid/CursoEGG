@@ -59,7 +59,7 @@ public class AutorJpaController implements Serializable {
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Long id = autor.getId();
+                Integer id = autor.getId();
                 if (findAutor(id) == null) {
                     throw new NonexistentEntityException("The autor with id " + id + " no longer exists.");
                 }
@@ -117,7 +117,7 @@ public class AutorJpaController implements Serializable {
         }
     }
 
-    public Autor findAutor(Long id) {
+    public Autor findAutor(Integer id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Autor.class, id);
@@ -137,6 +137,5 @@ public class AutorJpaController implements Serializable {
         } finally {
             em.close();
         }
-    }
-    
+    }    
 }

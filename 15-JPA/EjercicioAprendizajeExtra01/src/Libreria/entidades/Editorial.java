@@ -21,7 +21,7 @@ public class Editorial implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
     
     @Basic
     private String nombre;
@@ -30,7 +30,7 @@ public class Editorial implements Serializable {
     public Editorial() {
     }
 
-    public Editorial(Long id, String nombre, Boolean alta) {
+    public Editorial(Integer id, String nombre, Boolean alta) {
         this.id = id;
         this.nombre = nombre;
         this.alta = alta;
@@ -52,11 +52,11 @@ public class Editorial implements Serializable {
         this.alta = alta;
     }    
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
