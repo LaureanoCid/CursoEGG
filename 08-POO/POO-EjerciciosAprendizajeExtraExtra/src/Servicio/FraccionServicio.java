@@ -66,6 +66,15 @@ public class FraccionServicio {
         } while (op !=7);        
     }
     public void sumarFracciones(Fraccion fracciones){
+        int numerador = 0, denominador = 0;
+        int num1 = fracciones.getNumerador1(), num2 = fracciones.getNumerador2(), den1 = fracciones.getDenominador1(), den2 = fracciones.getDenominador2();
+        
+        
+        denominador = den1*den2;
+        numerador = (num1*den2)+(num2*den1);
+        
+        System.out.println("La suma es: " + numerador + "/" + denominador);
+        
         
     }
     public void restarFracciones(Fraccion fracciones){
@@ -79,6 +88,5 @@ public class FraccionServicio {
     }
     public void simplificar(Fraccion fracciones){
         
-    }
-    
+    }    
 }
