@@ -1,0 +1,13 @@
+*{
+    background-color: blueviolet;
+}
+h1, h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:italic;
+    text-align: center;
+}
+p{
+    text-align: left;
+    font-family:cursive;
+    color: aqua;  
+}

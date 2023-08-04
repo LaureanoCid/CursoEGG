@@ -1,0 +1,27 @@
+h1{
+    color:rgb(39, 147, 111);
+}
+.destacado{
+    color: rgb(241, 226, 9);
+}
+h2, em{
+    color: rgb(2, 18, 165);
+}
+.especial1{
+    color: blueviolet;
+}
+.especial, .purus{
+    color: rgb(241, 128, 15);
+}
+tfoot, .especial4, a, strong{
+    color: rgb(249, 11, 11);
+}
+table, .blandit, .donec{
+    color: rgb(4, 136, 43);
+}
+div{
+    color: rgb(105, 136, 51);
+}
+#especial5{
+    color: rgb(180, 69, 193);
+}
