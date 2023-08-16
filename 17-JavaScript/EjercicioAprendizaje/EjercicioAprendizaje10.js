@@ -5,5 +5,4 @@ var palabra = prompt("Ingrese una palabra: ");
 reves(palabra);
 
 
-
 let reves = (palabra) => alert()
