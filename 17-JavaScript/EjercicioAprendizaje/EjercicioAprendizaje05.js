@@ -5,6 +5,7 @@
     carácter de la operación que desea realizar: ‘S' o ‘s’ para la suma, ‘R’ o ‘r’ para la resta, ‘M’ 
     o ‘m’ para la multiplicación y ‘D’ o ‘d’ para la división. 
 */
+
 var num1, num2;
 var opcion = prompt(`Ingrese la operacion matematica que desee realizar: 
 Suma - (S) - (s)

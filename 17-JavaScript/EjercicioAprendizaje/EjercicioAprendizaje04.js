@@ -4,7 +4,6 @@
     que diga “CORRECTO”, en caso contrario, se deberá imprimir “INCORRECTO”.
     var mensaje = "ERROR! El valor ingresado es erroneo!"
 */
-
     do {
         var resp = prompt("Fuiste a votar? S / N").toUpperCase();  
         if (resp == "S") {
