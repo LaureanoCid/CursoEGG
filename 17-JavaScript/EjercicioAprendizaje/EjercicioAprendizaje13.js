@@ -14,7 +14,6 @@ var bartolo = new Persona("Bartolo", 18, "H", 73.2, 1.87);
 
 console.log(bartolo);
 
-
 //Lamba + ForEach
 Object.keys(bartolo).forEach(function(prop) {
     document.write(prop + ": " + bartolo[prop] + "<br>"); 
