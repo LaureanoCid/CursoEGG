@@ -4,25 +4,28 @@
     y luego informar mediante otro método el número de ISBN, el título, el autor del libro y el 
     numero de páginas.
 */
-function Libro(ISBN, titulo, autor,numPaginas){
-    this.ISBN = ISBN;
-    this.titulo = titulo;
-    this.autor = autor;
-    this.numPaginas = numPaginas;
+
+alert("Ingrese los datos del libro: ");
+cargarLibro();
+mostrarLibro();
+
+let libro = {
+    ISBN: 0,
+    Titulo: ' ',
+    Autor: ' ',
+    NumPag: 0,
 }
 
-var libro1 = new Libro();
+function cargarLibro(libro) {
+    ISBN = prompt('Ingrese el número de ISBN');
+    Titulo = prompt('Ingrese el título');
+    Autor = prompt('Ingrese el Autor');
+    NumPag = prompt('Ingrese el Número de Páginas');
+}
 
-let crear(libro1) => {    
-    libro1.ISBN = prompt("Ingrese el numero de identificacion: ");
-    libro1.titulo = prompt("Ingrese el titulo del libro: ");
-    libro1.autor  = prompt("Ingrese el nombre del autor: ");
-    libro1.numPaginas = prompt("Ingrese el numero de paginas: ");
+function mostrarLibro() {
+    alert(`ISBN: ${this.ISBN} 
+   Título:  ${this.Titulo} 
+   Autor:  ${this.Autor} 
+   Número de páginas: ${this.NumPag}`)
 }
-crear();
-let mostrar (libro1) => {
-    for (let propiedad in libro1) {
-        alert(propiedad + ": " + libro1[propiedad] + "<br>");
-    }
-}
-mostrar();
