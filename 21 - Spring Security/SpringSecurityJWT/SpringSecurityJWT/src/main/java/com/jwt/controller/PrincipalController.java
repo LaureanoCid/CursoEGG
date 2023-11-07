@@ -1,10 +1,10 @@
-package com.SpringJWT.SpringSecurityJWT.controller;
+package com.jwt.controller;
 
-import com.SpringJWT.SpringSecurityJWT.controller.request.CreateUserDTO;
-import com.SpringJWT.SpringSecurityJWT.models.ERole;
-import com.SpringJWT.SpringSecurityJWT.models.RoleEntity;
-import com.SpringJWT.SpringSecurityJWT.models.UserEntity;
-import com.SpringJWT.SpringSecurityJWT.repositories.UserRepository;
+import com.jwt.controller.request.CreateUserDTO;
+import com.jwt.models.ERole;
+import com.jwt.models.RoleEntity;
+import com.jwt.models.UserEntity;
+import com.jwt.repositories.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
