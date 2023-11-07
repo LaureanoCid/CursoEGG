@@ -1,10 +1,10 @@
 package com.jwt.security;
 
 
-/*import com.jwt.security.filters.JwtAuthenticationFilter;
-import com.jwt.security.filters.JwtAuthorizationFilter;
-import com.jwt.security.jwt.JwtUtils;
-import com.jwt.service.UserDetailServiceImp;*/
+//import com.jwt.security.filters.JwtAuthenticationFilter;
+//import com.jwt.security.filters.JwtAuthorizationFilter;
+//import com.jwt.security.jwt.JwtUtils;
+import com.jwt.service.UserDetailServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +13,12 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -22,14 +26,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-   /* @Autowired
-    JwtUtils jwtUtils;
+//    @Autowired
+//    JwtUtils jwtUtils;
 
     @Autowired
     UserDetailServiceImp userDetailsService;
 
-    @Autowired
-    JwtAuthorizationFilter authorizationFilter;*/
+//    @Autowired
+//    JwtAuthorizationFilter authorizationFilter;
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, AuthenticationManager authenticationManager) throws Exception {
@@ -47,25 +51,27 @@ public class SecurityConfig {
                 .sessionManagement(session -> {
                     session.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
                 })
+                .httpBasic()
+                .and()
                 /*.addFilter(jwtAuthenticationFilter)
                 .addFilterBefore(authorizationFilter, UsernamePasswordAuthenticationFilter.class)*/
                 .build();
     }
 
-//    @Bean
-//    UserDetailsService userDetailsService(){
-//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-//        manager.createUser(User.withUsername("pao")
-//                .password("1234")
-//                .roles()
-//                .build());
-//
-//        return manager;
-//    }
+    @Bean
+    UserDetailsService userDetailsService(){
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(User.withUsername("pao")
+                .password("1234")
+                .roles()
+                .build());
+
+        return manager;
+    }
 
     @Bean
     PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
+        return NoOpPasswordEncoder.getInstance();
     }
 
     @Bean
