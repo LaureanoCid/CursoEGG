@@ -1,9 +1,8 @@
 package com.jwt.security;
 
-
-//import com.jwt.security.filters.JwtAuthenticationFilter;
-//import com.jwt.security.filters.JwtAuthorizationFilter;
-//import com.jwt.security.jwt.JwtUtils;
+import com.jwt.security.filters.JwtAuthenticationFilter;
+import com.jwt.security.filters.JwtAuthorizationFilter;
+import com.jwt.security.jwt.JwtUtils;
 import com.jwt.service.UserDetailServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -26,21 +25,21 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-//    @Autowired
-//    JwtUtils jwtUtils;
+    @Autowired
+    JwtUtils jwtUtils;
 
     @Autowired
     UserDetailServiceImp userDetailsService;
 
-//    @Autowired
-//    JwtAuthorizationFilter authorizationFilter;
+    @Autowired
+    JwtAuthorizationFilter authorizationFilter;
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, AuthenticationManager authenticationManager) throws Exception {
 
-        /*JwtAuthenticationFilter jwtAuthenticationFilter = new JwtAuthenticationFilter(jwtUtils);
+        JwtAuthenticationFilter jwtAuthenticationFilter = new JwtAuthenticationFilter(jwtUtils);
         jwtAuthenticationFilter.setAuthenticationManager(authenticationManager);
-        jwtAuthenticationFilter.setFilterProcessesUrl("/login");*/
+        jwtAuthenticationFilter.setFilterProcessesUrl("/login");
 
         return httpSecurity
                 .csrf(config -> config.disable())
@@ -51,14 +50,12 @@ public class SecurityConfig {
                 .sessionManagement(session -> {
                     session.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
                 })
-                .httpBasic()
-                .and()
-                /*.addFilter(jwtAuthenticationFilter)
-                .addFilterBefore(authorizationFilter, UsernamePasswordAuthenticationFilter.class)*/
+                .addFilter(jwtAuthenticationFilter)
+                .addFilterBefore(authorizationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 
-    @Bean
+   /* @Bean
     UserDetailsService userDetailsService(){
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(User.withUsername("pao")
@@ -67,7 +64,7 @@ public class SecurityConfig {
                 .build());
 
         return manager;
-    }
+    }*/
 
     @Bean
     PasswordEncoder passwordEncoder(){
